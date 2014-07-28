@@ -4,16 +4,19 @@ QuestionAnsweringSystemÊÇÒ»¸öJavaÊµÏÖµÄÈË»úÎÊ´ğÏµÍ³£¬ÄÜ¹»×Ô¶¯·ÖÎöÎÊÌâ²¢¸ø³öºòÑ¡´
 Ê¹ÓÃËµÃ÷£º
 
 1¡¢³õÊ¼»¯MySQLÊı¾İ¿â£º   
+
    ÔÚMySQLÃüÁîĞĞÖĞÖ´ĞĞQuestionAnsweringSystem\src\main\resources\mysql\questionanswer.sqlÎÄ¼şÖĞµÄ½Å±¾
    MySQLÖ÷»ú£º127.0.0.1£¬¶Ë¿Ú£º3306£¬Êı¾İ¿â£ºquestionanswer£¬ÓÃ»§Ãû£ºroot£¬ÃÜÂë£ºroot
 	
 2¡¢¹¹½¨warÎÄ¼ş²¢²¿Êğµ½tomcat£º
+
    cd QuestionAnsweringSystem
    mvn install
    cp target\QuestionAnsweringSystem-1.0.war apache-tomcat-7.0.37/webapps/QuestionAnsweringSystem-1.0.war
    Æô¶¯tomcat
 	
 3¡¢´ò¿ªä¯ÀÀÆ÷·ÃÎÊ£º
+
    http://localhost:8080/QuestionAnsweringSystem-1.0/
 	
 
