@@ -216,6 +216,9 @@ public class MainPartExtracter {
         String third = null;
 
         String value = map.get(v);
+        if(value == null){
+            return null;
+        }
         //判断是否是多值
         String[] values = value.split(":");
         if (values != null && values.length > 0) {
