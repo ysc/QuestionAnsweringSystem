@@ -20,9 +20,9 @@
 
 package org.apdplat.qa;
 
+import org.apdplat.qa.datasource.BaiduDataSource;
 import org.apdplat.qa.datasource.ConsoleDataSource;
 import org.apdplat.qa.datasource.DataSource;
-import org.apdplat.qa.datasource.GoogleDataSource;
 import org.apdplat.qa.system.CommonQuestionAnsweringSystem;
 import org.apdplat.qa.system.QuestionAnsweringSystem;
 import org.slf4j.Logger;
@@ -41,10 +41,10 @@ public class ConsoleDemo {
 	//Google数据源
         //DataSource dataSource = new GoogleDataSource();
         //Baidu数据源
-        DataSource dataSource = new GoogleDataSource();
+        DataSource dataSource = new BaiduDataSource();
         //控制台数据源
         dataSource = new ConsoleDataSource(dataSource);
-        //人名问答系统
+        //问答系统
         QuestionAnsweringSystem questionAnsweringSystem = new CommonQuestionAnsweringSystem();
         //指定控制台数据源
         questionAnsweringSystem.setDataSource(dataSource);
