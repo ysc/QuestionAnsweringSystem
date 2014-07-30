@@ -87,9 +87,9 @@ public class PatternMatchStrategy {
         patternMatchStrategy.addQuestionPattern(QuestionPattern.Natures);
         patternMatchStrategy.addQuestionPattern(QuestionPattern.MainPartPattern);
         patternMatchStrategy.addQuestionPattern(QuestionPattern.MainPartNaturePattern);
-        patternMatchStrategy.addQuestionTypePatternFile("QuestionTypePatternsLevel1.txt");
-        patternMatchStrategy.addQuestionTypePatternFile("QuestionTypePatternsLevel2.txt");
-        patternMatchStrategy.addQuestionTypePatternFile("QuestionTypePatternsLevel3.txt");
+        patternMatchStrategy.addQuestionTypePatternFile("QuestionTypePatternsLevel1_true.txt");
+        patternMatchStrategy.addQuestionTypePatternFile("QuestionTypePatternsLevel2_true.txt");
+        patternMatchStrategy.addQuestionTypePatternFile("QuestionTypePatternsLevel3_true.txt");
 
         LOG.info("策略有效？" + patternMatchStrategy.validate());
         LOG.info("策略描述：" + patternMatchStrategy.getStrategyDes());

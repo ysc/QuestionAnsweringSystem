@@ -58,8 +58,8 @@ public class BestClassifierSearcher {
         patternMatchStrategy.addQuestionPattern(QuestionPattern.Natures);
         patternMatchStrategy.addQuestionPattern(QuestionPattern.MainPartPattern);
         patternMatchStrategy.addQuestionPattern(QuestionPattern.MainPartNaturePattern);
-        patternMatchStrategy.addQuestionTypePatternFile("QuestionTypePatternsLevel2_false.txt");
-        patternMatchStrategy.addQuestionTypePatternFile("QuestionTypePatternsLevel3_false.txt");
+        patternMatchStrategy.addQuestionTypePatternFile("QuestionTypePatternsLevel2_true.txt");
+        patternMatchStrategy.addQuestionTypePatternFile("QuestionTypePatternsLevel3_true.txt");
         //计算分类
         classify(patternMatchStrategy);
         //输出统计结果
@@ -75,9 +75,9 @@ public class BestClassifierSearcher {
         allQuestionPatterns.add(QuestionPattern.MainPartNaturePattern);
 
         List<String> allQuestionTypePatternFiles = new ArrayList<>();
-        //allQuestionTypePatternFiles.add("QuestionTypePatternsLevel1_false.txt");
-        allQuestionTypePatternFiles.add("QuestionTypePatternsLevel2_false.txt");
-        allQuestionTypePatternFiles.add("QuestionTypePatternsLevel3_false.txt");
+        //allQuestionTypePatternFiles.add("QuestionTypePatternsLevel1_true.txt");
+        allQuestionTypePatternFiles.add("QuestionTypePatternsLevel2_true.txt");
+        allQuestionTypePatternFiles.add("QuestionTypePatternsLevel3_true.txt");
 
         List<List<QuestionPattern>> allQuestionPatternCom = Tools.getCom(allQuestionPatterns);
         LOG.info("问题模式组合种类：" + allQuestionPatternCom.size());

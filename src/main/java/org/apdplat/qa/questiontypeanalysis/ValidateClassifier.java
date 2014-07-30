@@ -58,9 +58,9 @@ public class ValidateClassifier {
         patternMatchStrategy.addQuestionPattern(QuestionPattern.Natures);
         patternMatchStrategy.addQuestionPattern(QuestionPattern.MainPartPattern);
         patternMatchStrategy.addQuestionPattern(QuestionPattern.MainPartNaturePattern);
-        patternMatchStrategy.addQuestionTypePatternFile("QuestionTypePatternsLevel1_false.txt");
-        patternMatchStrategy.addQuestionTypePatternFile("QuestionTypePatternsLevel2_false.txt");
-        patternMatchStrategy.addQuestionTypePatternFile("QuestionTypePatternsLevel3_false.txt");
+        patternMatchStrategy.addQuestionTypePatternFile("QuestionTypePatternsLevel1_true.txt");
+        patternMatchStrategy.addQuestionTypePatternFile("QuestionTypePatternsLevel2_true.txt");
+        patternMatchStrategy.addQuestionTypePatternFile("QuestionTypePatternsLevel3_true.txt");
         PatternMatchResultSelector patternMatchResultSelector = new DefaultPatternMatchResultSelector();
         questionClassifier = new PatternBasedMultiLevelQuestionClassifier(patternMatchStrategy, patternMatchResultSelector);
     }
