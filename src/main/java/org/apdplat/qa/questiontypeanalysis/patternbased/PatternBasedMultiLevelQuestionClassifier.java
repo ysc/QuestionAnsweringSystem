@@ -161,7 +161,7 @@ public class PatternBasedMultiLevelQuestionClassifier extends AbstractQuestionCl
                 LOG.info("\t分类 : " + item.getType());
             }
         }
-        for (QuestionTypePatternFile file : patternMatchResult.getQuestionTypePatternFilesFromLooseToCompact()) {
+        for (QuestionTypePatternFile file : patternMatchResult.getQuestionTypePatternFilesFromCompactToLoose()) {
             LOG.info("问题类型模式【" + file.getFile() + "】匹配情况，是否允许匹配多个类型：" + file.isMultiMatch());
             int i = 1;
             for (PatternMatchResultItem item : patternMatchResult.getPatternMatchResult(file)) {
@@ -403,9 +403,9 @@ public class PatternBasedMultiLevelQuestionClassifier extends AbstractQuestionCl
         patternMatchStrategy.addQuestionPattern(QuestionPattern.Natures);
         patternMatchStrategy.addQuestionPattern(QuestionPattern.MainPartPattern);
         patternMatchStrategy.addQuestionPattern(QuestionPattern.MainPartNaturePattern);
-        patternMatchStrategy.addQuestionTypePatternFile("QuestionTypePatternsLevel1_false.txt");
-        patternMatchStrategy.addQuestionTypePatternFile("QuestionTypePatternsLevel2_false.txt");
-        patternMatchStrategy.addQuestionTypePatternFile("QuestionTypePatternsLevel3_false.txt");
+        patternMatchStrategy.addQuestionTypePatternFile("QuestionTypePatternsLevel1_true.txt");
+        patternMatchStrategy.addQuestionTypePatternFile("QuestionTypePatternsLevel2_true.txt");
+        patternMatchStrategy.addQuestionTypePatternFile("QuestionTypePatternsLevel3_true.txt");
 
         PatternMatchResultSelector patternMatchResultSelector = new DefaultPatternMatchResultSelector();
 
