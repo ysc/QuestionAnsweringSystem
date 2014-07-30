@@ -91,6 +91,7 @@ public class DefaultPatternMatchResultSelector implements PatternMatchResultSele
                 if (question.getCandidateQuestionTypes().contains(selectedType)) {
                     question.removeCandidateQuestionType(selectedType);
                 }
+                return question;
             } else {
                 //只有一个匹配结果
                 LOG.info("只有一个匹配结果，匹配成功");
