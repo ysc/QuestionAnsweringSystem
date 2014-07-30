@@ -105,8 +105,8 @@ public class DefaultPatternMatchResultSelector implements PatternMatchResultSele
                 return question;
             }
         }
-        LOG.info("匹配未成功，不能识别问题类型");
-        question.setQuestionType(QuestionType.NULL);
+        LOG.info("匹配未成功，不能识别问题类型，不能识别的问题类型统一指定为："+QuestionType.PERSON_NAME);
+        question.setQuestionType(QuestionType.PERSON_NAME);
         return question;
     }
 
