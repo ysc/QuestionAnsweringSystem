@@ -1,5 +1,13 @@
 QuestionAnsweringSystemÊÇÒ»¸öJavaÊµÏÖµÄÈË»úÎÊ´ðÏµÍ³£¬ÄÜ¹»×Ô¶¯·ÖÎöÎÊÌâ²¢¸ø³öºòÑ¡´ð°¸¡£
 
+¹¤×÷Ô­Àí£º
+
+    1¡¢ÅÐ¶ÏÎÊÌâÀàÐÍ£¨´ð°¸ÀàÐÍ£©£¬µ±Ç°Ê¹ÓÃÄ£Ê½Æ¥ÅäµÄ·½·¨£¬½«À´Ö§³Ö¸ü¶àµÄ·½·¨£¬ÈçÆÓËØ±´Ò¶Ë¹·ÖÀàÆ÷¡£
+    2¡¢ÌáÈ¡ÎÊÌâ¹Ø¼ü´Ê¡£
+    3¡¢ÀûÓÃÎÊÌâ¹Ø¼ü´ÊËÑË÷¶àÖÖÊý¾ÝÔ´£¬µ±Ç°µÄÊý¾ÝÔ´Ö÷ÒªÊÇÈË¹¤±ê×¢µÄÓïÁÏ¿â¡¢¹È¸è¡¢°Ù¶È¡£
+    4¡¢´ÓËÑË÷½á¹ûÖÐ¸ù¾ÝÎÊÌâÀàÐÍ£¨´ð°¸ÀàÐÍ£©ÌáÈ¡ºòÑ¡´ð°¸¡£
+    5¡¢½áºÏÎÊÌâÒÔ¼°ËÑË÷½á¹û¶ÔºòÑ¡´ð°¸½øÐÐ´ò·Ö¡£
+    6¡¢·µ»ØµÃ·Ö×î¸ßµÄTopNÏîºòÑ¡´ð°¸¡£
 
 Ê¹ÓÃËµÃ÷£º
 
@@ -23,6 +31,4 @@ QuestionAnsweringSystemÊÇÒ»¸öJavaÊµÏÖµÄÈË»úÎÊ´ðÏµÍ³£¬ÄÜ¹»×Ô¶¯·ÖÎöÎÊÌâ²¢¸ø³öºòÑ¡´
 
     http://localhost:8080/QuestionAnsweringSystem-1.0/
 	
-
-
 [¿É²¿Êðwar°üÏÂÔØ](http://pan.baidu.com/s/1hq9pekc)
