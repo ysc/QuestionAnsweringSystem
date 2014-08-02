@@ -16,28 +16,21 @@
    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --%>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@page import="org.apdplat.qa.system.CommonQuestionAnsweringSystem"%>
-<%@page import="org.apdplat.qa.model.QuestionType"%>
-<%@page import="org.apdplat.qa.system.QuestionAnsweringSystem"%>
-<%@page import="org.apdplat.qa.datasource.BaiduDataSource"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>    
 <%@page import="org.apdplat.qa.model.Question"%>
+<%@page import="org.apdplat.qa.model.Evidence"%>
 <%@page import="org.apdplat.qa.model.CandidateAnswer"%>
+<%@page import="org.apdplat.qa.model.QuestionType"%>
+<%@page import="org.apdplat.qa.SharedQuestionAnsweringSystem"%>
 <%@page import="java.util.List"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <%
-    QuestionAnsweringSystem questionAnsweringSystem = (QuestionAnsweringSystem) session.getAttribute("questionAnsweringSystem");
-    if (questionAnsweringSystem == null) {
-        questionAnsweringSystem = new CommonQuestionAnsweringSystem();
-        questionAnsweringSystem.setDataSource(new BaiduDataSource());
-        session.setAttribute("questionAnsweringSystem", questionAnsweringSystem);
-    }
-    String questionStr = request.getParameter("questionStr");
-
+    request.setCharacterEncoding("UTF-8");
+    String questionStr = request.getParameter("q");
+    Question question = null;
     List<CandidateAnswer> candidateAnswers = null;
     if (questionStr != null && questionStr.trim().length() > 3) {
-        questionStr = new String(questionStr.getBytes("ISO8859-1"), "UTF-8");
-        Question question = questionAnsweringSystem.answerQuestion(questionStr);
+        question = SharedQuestionAnsweringSystem.getInstance().answerQuestion(questionStr);
         if (question != null) {
             candidateAnswers = question.getAllCandidateAnswer();
         }
@@ -102,7 +95,7 @@
             13、全球表面积有多少平方公里？
         </p>
         <form action="index.jsp" method="post">
-            <font color="red">输入问题：</font><input name="questionStr" size="150" maxlength="150">
+            <font color="red">输入问题：</font><input name="q" size="150" maxlength="150">
             <p></p>
             <input type="submit" value="查看答案"/>
         </form>
