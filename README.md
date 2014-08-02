@@ -41,6 +41,28 @@ QuestionAnsweringSystemÊÇÒ»¸öJavaÊµÏÖµÄÈË»úÎÊ´ðÏµÍ³£¬ÄÜ¹»×Ô¶¯·ÖÎöÎÊÌâ²¢¸ø³öºòÑ¡´
 		´óÇìÓÍÌïÊÇÄÄÒ»Äê·¢ÏÖµÄ£¿
 		°ÄÃÅÊÇÔÚÄÄÒ»Äê»Ø¹é×æ¹ú»³±§µÄ£¿
 		µËÐ¡Æ½ÔÚÊ²Ã´Ê±ºò½øÐÐÄÏÑ²½²»°£¿
+		
+API½Ó¿Ú£º
+
+	µ÷ÓÃµØÖ·£º
+		http://localhost:8080/QuestionAnsweringSystem/api/ask?n=1&q=APDPlatµÄ×÷ÕßÊÇË­£¿
+	²ÎÊý£º
+		n±íÊ¾ÐèÒª·µ»ØµÄ´ð°¸µÄ¸öÊý
+		q±íÊ¾ÎÊÌâ
+	±àÂë£º
+		·þÎñ¶ËºÍ¿Í»§¶Ë¾ùÊ¹ÓÃUTF-8±àÂë
+		·þÎñ¶ËÐèÒªÐÞ¸ÄtomcatÅäÖÃÎÄ¼þconf/server.xml£¬ÔÚÏàÓ¦µÄConnectorÖÐ¼ÓÈëÅäÖÃURIEncoding="UTF-8"
+	·µ»Øjson:
+		[
+			{
+				"answer": "²Ü²Ù",
+				"score": 1
+			},
+			{
+				"answer": "¶Å¸¦",
+				"score": 0.23299120812310145
+			}
+		]
 			
 Ê¹ÓÃËµÃ÷£º
 
