@@ -127,6 +127,7 @@
         <nekohtml.version>1.9.19</nekohtml.version>
         <stanford-parser.version>3.3.1</stanford-parser.version>
         <jcl-over-slf4j.version>1.6.4</jcl-over-slf4j.version>
+        <jackson.version>1.9.13</jackson.version>
         <!-- 数据库驱动 -->
         <mysql.version>5.1.18</mysql.version>
     </properties>
@@ -209,6 +210,11 @@
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <version>${mysql.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.codehaus.jackson</groupId>
+            <artifactId>jackson-mapper-asl</artifactId>
+            <version>${jackson.version}</version>
         </dependency>
     </dependencies>
 </project>
