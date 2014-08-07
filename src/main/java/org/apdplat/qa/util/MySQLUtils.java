@@ -62,6 +62,9 @@ public class MySQLUtils {
     public static String getRewindEvidenceText(String question, String answer) {
         String sql = "SELECT text FROM rewind where question=?";
         Connection con = getConnection();
+        if(con == null){
+            return null;
+        }
         PreparedStatement pst = null;
         ResultSet rs = null;
         try {
@@ -85,6 +88,9 @@ public class MySQLUtils {
     public static void saveRewindEvidenceText(String question, String answer, String text) {
         String sql = "insert into rewind (question, text) values (?, ?)";
         Connection con = getConnection();
+        if(con == null){
+            return ;
+        }
         PreparedStatement pst = null;
         ResultSet rs = null;
         try {
@@ -110,6 +116,9 @@ public class MySQLUtils {
         String questionSql = "select id,question from question";
         String evidenceSql = "select title,snippet from evidence where question=?";
         Connection con = getConnection();
+        if(con == null){
+            return questions;
+        }
         PreparedStatement pst = null;
         PreparedStatement pst2 = null;
         ResultSet rs = null;
@@ -152,6 +161,9 @@ public class MySQLUtils {
         String questionSql = "select id,question from question where question=?";
         String evidenceSql = "select title,snippet from evidence where question=?";
         Connection con = getConnection();
+        if(con == null){
+            return null;
+        }
         PreparedStatement pst = null;
         ResultSet rs = null;
         try {
@@ -197,6 +209,9 @@ public class MySQLUtils {
         String questionSql = "insert into question (question) values (?)";
         String evidenceSql = "insert into evidence (title, snippet, question) values (?, ?, ?)";
         Connection con = getConnection();
+        if(con == null){
+            return ;
+        }
         PreparedStatement pst = null;
         ResultSet rs = null;
         try {
