@@ -32,26 +32,31 @@
         <title>人机问答系统演示</title>
     </head>
     <body>
-        <h1><font color="blue">人机问答系统演示</font></h1>
+        <h1><font color="blue">人机问答系统演示 <a href="https://github.com/ysc/QuestionAnsweringSystem" target="_blank">项目主页</a></font></h1>
                 <%
                     int i = 1;
                     for (Question question : questions) {
                 %>
-        <font color="red">Question <%=(i++)%> : <%=question.getQuestion()%></font><br/>
-            <%
-                int j = 1;
-                for (Evidence evidence : question.getEvidences()) {
-            %>
-        <font color="red"> Title <%=j%> : </font> <%=evidence.getTitle()%><br/>
-        <font color="red"> Snippet <%=j%> : </font> <%=evidence.getSnippet()%><br/>
-            <%
-                    j++;
-                }
-            %>
-        <br/>
-        <br/>
-        <%
-            }
-        %>
+                <font color="red">Question <%=(i++)%> : <%=question.getQuestion()%></font><br/>
+                    <%
+                        int j = 1;
+                        for (Evidence evidence : question.getEvidences()) {
+                    %>
+                <font color="red"> Title <%=j%> : </font> <%=evidence.getTitle()%><br/>
+                <font color="red"> Snippet <%=j%> : </font> <%=evidence.getSnippet()%><br/>
+                    <%
+                            j++;
+                        }
+                    %>
+                <br/>
+                <br/>
+                <%
+                    }
+                    if(questions.isEmpty()){
+                %>
+                MySQL中没有缓存任何数据或MySQL未启动
+                <%
+                    }
+                %>
     </body>
 </html>
