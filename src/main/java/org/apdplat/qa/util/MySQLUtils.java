@@ -43,7 +43,8 @@ public class MySQLUtils {
     private static final Logger LOG = LoggerFactory.getLogger(MySQLUtils.class);
 
     private static final String DRIVER = "com.mysql.jdbc.Driver";
-    private static final String URL = "jdbc:mysql://127.0.0.1:3306/questionanswer";
+    // 防止出现Java中连接数据库时汉字都变成问号问题
+    private static final String URL = "jdbc:mysql://127.0.0.1:3306/questionanswer?useUnicode=true&characterEncoding=utf8";
     //private static final String URL = "jdbc:mysql://127.0.0.1:3306/questionanswer_fulltext";
     private static final String USER = "root";
     private static final String PASSWORD = "root";
