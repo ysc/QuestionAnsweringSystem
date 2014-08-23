@@ -1,3 +1,4 @@
-/target/
-/logs/
-/nb-configuration.xml
+/deep-qa/target/
+/deep-qa/logs/
+/deep-qa-web/target/
+/deep-qa-web/nb-configuration.xml

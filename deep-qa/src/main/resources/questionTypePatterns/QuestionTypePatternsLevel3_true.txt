@@ -1,0 +1,500 @@
+Person->Multi1 .*(RW.RWPersonMulti).*
+Person->Multi2 .*(V.).*(RW.RWOrdinaryMulti).*(nr|nr1|nr2|nrj|nrf).*
+Person->Multi3 .*(nr|nr1|nr2|nrj|nrf).*(V.).*(RW.RWPersonMulti).*
+Person->Multi4 .*(nr|nr1|nr2|nrj|nrf).*(V.).*(RW.RWOrdinaryMulti).*
+Person->Multi5 .*哪.*M.*(nr|nr1|nr2|nrj|nrf).*
+Person->Description .*(V.).*(RW.RWDescriptive).*(nr|nr1|nr2|nrj|nrf).*
+Person->Single1 .*(RW.RWPersonSingle).*
+Person->Single2 .*(nr|nr1|nr2|nrj|nrf).*(V.).*(RW.RWOrdinarySingle).*
+Person->Single3 .*(nr|nr1|nr2|nrj|nrf).*(V.).*(RW.RWPersonSingle).*
+Person->Single4 .*(RW.RWOrdinarySingle).*(nr|nr1|nr2|nrj|nrf).*(V.).*
+Person->Single5 .*(RW.RWPersonSingle).*(V.).*(nr|nr1|nr2|nrj|nrf).*
+Person->Single6 .*(V.).*(RW.RWPersonSingle).*
+Person->Single7 .*(V.).*(RW.RWPersonSingle).*(V.).*
+Person->Single8 .*(V.).*(RW.RWOrdinarySingle).*(nr|nr1|nr2|nrj|nrf).*
+Person->Single9 .*(V.).*(RW.RWPersonSingle).*(nr|nr1|nr2|nrj|nrf).*
+
+Location->Multi1 .*RWLocationMulti*
+Location->Multi2 .*(V.).*(RW.RWOrdinaryMulti).*(ns|nsf).*
+Location->Multi3 .*(V.).*(RW.RWLocationMulti).*(ns|nsf).*
+Location->Multi4 .*(P.).*(RW.RWOrdinaryMulti).*(ns|nsf).*
+Location->Multi5 .*(P.).*(RW.RWLocationMulti).*(ns|nsf).*
+Location->Multi6 .*(V).*哪.*(M).*(ns|nsf)
+Location->Multi7 .*(ns|nsf).*(V.).*(RW.RWOrdinaryMulti).*
+Location->Multi8 .*(ns|nsf).*(P.).*(RW.RWOrdinaryMulti).*
+Location->Multi9 .*(RW.RWOrdinaryMulti).*(ns|nsf).*
+Location->Multi10 .*列举.*(ns|nsf).*
+Location->Single1 .*(RW.RWLocationSingle).*
+Location->Single2 .*(V.).*(RW.RWOrdinarySingle).*(ns|nsf).*
+Location->Single3 .*(V.).*(RW.RWLocationSingle).*(ns|nsf).*
+Location->Single4 .*(V.).*(RW.RWLocationSingle).*(nr|nr1|nr2|nrj|nrf).*
+Location->Single5 .*(P.).*(RW.RWOrdinarySingle).*(ns|nsf).*
+Location->Single6 .*(P.).*(RW.RWLocationSingle).*(ns|nsf).*
+Location->Single7 .*(ns|nsf).*(V.).*(RW.RWOrdinarySingle).*
+Location->Single8 .*(ns|nsf).*(P.).*(RW.RWOrdinarySingle).*
+Location->Single9 .*(RW.RWOrdinarySingle).*(ns|nsf).*
+
+Organization->Multi1 .*(V.).*(RW.RWOrdinaryMulti).*(nt).*
+Organization->Multi2 .*(nt).*(V.).*(RW.RWOrdinaryMulti).*
+Organization->Multi3 .*(nt).*(V.).*(RW.RWOrganizationMulti).*
+Organization->Multi4 .*(nt).*(P.).*(RW.RWOrdinaryMulti).*
+Organization->Multi5 .*(V.).*(RW.RWOrganizationMulti).*(nt).*
+Organization->Multi6 .*(RW.RWOrganizationMulti).*(nt).*(V.).*
+Organization->Multi7 .*(RW.RWOrdinaryMulti).*(nt).*(V.).*
+Organization->Multi8 .*列举.*(nt).*
+Organization->Single1 .*(V.).*(RW.RWOrdinarySingle).*(nt).*
+Organization->Single2 .*(nt).*(V.).*(RW.RWOrdinarySingle).*
+Organization->Single3 .*(nt).*(P.).*(RW.RWOrdinarySingle).*
+Organization->Single4 .*(V.).*(RW.RWOrganizationSingle).*(nt).*
+Organization->Single5 .*(P.).*(RW.RWOrdinarySingle).*(nt).*
+Organization->Single6 .*(RW.RWOrganizationSingle).*(nt).*(V.).*
+Organization->Single7 .*(RW.RWOrdinarySingle).*(nt).*(V.).*
+Organization->Single8 .*(RW.RWOrdinarySingle).*(nt).*(P.).*
+
+Definition->Definition1 .*(RW.RWOrdinarySingle).*(V.).*(N.Concept).*
+Definition->Definition2 .*(N.Concept).*(V.).*(RW.RWDescriptive).*
+Definition->Definition3 .*(N.Concept).*(V.).*(RW.RWOrdinarySingle).*
+Definition->Definition4 .*(N.Concept).*(V.).*(RW.RWOrdinaryMulti).*
+Definition->Definition6 .*(RW.RWOrdinarySingle).*(V.).*(RW.RWDefinitionDes).*
+Definition->Definition7 .*(RW.RWDefinitionDes).*(N.Concept).*
+Definition->Definition8 .*(RW.RWDefinitionDes).*(V.).*(RW.RWOrdinarySingle).*
+Definition->Definition9 .*(N.Concept).*(RW.RWDescriptive).*(RW.RWDefinitionDes).*
+Definition->Definition10 .*(RW.RWDescriptive).*(V.).*(N.Concept).*
+Definition->Definition11 .*(RW.RWDescriptive).*(P.).*(N.Concept).*
+Definition->Definition12 .*(RW.RWDescriptive).*(V.).*(ns|nsf).*
+Definition->Definition12 .*(RW.RWDescriptive).*(V.).*(nr|nr1|nr2|nrj|nrf).*
+Definition->Definition13 .*(RW.RWDescriptive).*(V.).*
+Definition->Definition14 .*(V.).*(RW.RWDescriptive).*(V.).*
+Definition->Definition15 .*(V.).*(RW.RWDescriptive).*(N.Concept).*
+Definition->Definition16 .*(V).*(RW.RWOrdinarySingle).*(N.Concept).*
+Definition->Definition17 .*(V.).*(RW.RWOrdinaryMulti).*(N.Concept).*
+Definition->Descriptive .*(N.Concept).*(RW.RWDescriptive).*
+Definition->Superlative .*(N.Concept).*(RW.RWOrdinarySingle).*(RW.RWSuperlativeAdj).*
+Definition->Meaning1 .*(N.Concept).*(RW.RWDescriptive).*(N.MethodOfConcept).*
+Definition->Meaning2 .*(V.).*(RW.RWOrdinarySingle).*(N.MeaningOfConcept).*
+Definition->Meaning3 .*(V.).*(RW.RWOrdinaryMulti).*(N.MeaningOfConcept).*
+Definition->Meaning4 .*(N.MeaningOfConcept).*(V.).*(RW.RWOrdinarySingle).*
+Definition->Meaning5 .*(N.MeaningOfConcept).*(V.).*(RW.RWOrdinaryMulti).*
+Definition->Language1 .*(N.LanguageOfConcept).*(V.).*(RW.RWOrdinarySingle).*
+Definition->Language2 .*(N.LanguageOfConcept).*(RW.RWDescriptive).*(V).*
+Definition->Animal1 .*(N.AnimalOfConcept).*(RW.RWDescriptive).*(V).*
+Definition->Animal2 .*(N.AnimalOfConcept).*(V).*(RW.RWDescriptive).*
+Definition->Animal3 .*(N.AnimalOfConcept).*(P).*(RW.RWDescriptive).*
+Definition->Anima3 .*(N.AnimalOfConcept).*(RW.RWWhy).*(V).*
+Definition->Method1 .*(N.MethodOfConcept).*(V.).*(RW.RWOrdinarySingle).*
+Definition->Method2 .*(N.MethodOfConcept).*(V.).*(RW.RWOrdinaryMulti).*
+Definition->Method3 .*(RW.RWOrdinarySingle).*(N.MethodOfConcept).*(V.).*
+Definition->Method4 .*(V.).*(RW.RWOrdinarySingle).*(N.MethodOfConcept).*
+Definition->Method5 .*(P.).*(RW.RWOrdinarySingle).*(N.MethodOfConcept).*
+Definition->Method6 .*(V.).*(RW.RWOrdinaryMulti).*(N.MethodOfConcept).*
+Definition->Method7 .*(P.).*(RW.RWOrdinaryMulti).*(N.MethodOfConcept).*
+Definition->Method8 .*(V.).*(RW.RWDescriptive).*(N.MethodOfConcept).*
+Definition->Color1 .*(N.ColorOfConcept).*(V.).*(RW.RWOrdinarySingle).*
+Definition->Color2 .*(N.ColorOfConcept).*(V.).*(RW.RWDescriptive).*
+Definition->Comparison1 .*(N.Concept).*(RW.RWOrdinarySingle).*(RW.RWComparisonAdj).*
+Definition->Comparison2 .*(N.Concept).*(RW.RWComparisonAdj).*
+Definition->Comparison3 .*(ns|nsf).*(RW.RWComparisonAdj).*
+Definition->Comparison4 .*(RW.RWComparisonAdj).*(N.Concept).*
+Definition->GeneralQuestion .*吗.*
+Definition->AlternativeQuestion .*还是*
+Definition->PersonDescriptive1 .*(RW.RWDescriptive).*(V).*(nr|nr1|nr2|nrj|nrf).*
+Definition->PersonDescriptive2 .*(nr|nr1|nr2|nrj|nrf).*(V).*(RW.RWDescriptive).*
+Definition->LoationDescriptive .*(ns|nsf).*(RW.RWDescriptive).*
+Definition->OrganizationDescriptive .*(nt).*(RW.RWDescriptive).*
+Definition->Reason1 .*(nr|nr1|nr2|nrj|nrf).*(RW.RWWhy).*(A).*
+Definition->ReasonSingle .*(N.RWReason).*(V.).*(RW.RWOrdinarySingle).*
+Definition->ReasonMulti .*(N.RWReason).*(V.).*(RW.RWOrdinaryMulti).*
+Definition->Reason3 .*(V).*(RW.RWWhy).*
+Definition->Reason4 .*(N.Concept).*(RW.RWWhy).*
+Definition->Reason5 .*(ns|nsf).*(RW.RWWhy).*
+Definition->Reason6 .*由什么引起.*
+Definition->Reason7 .*(RW.RWWhy).*(nr|nr1|nr2|nrj|nrf).*
+Definition->Reason8 .*(RW.RWWhy).*(N.Concept).*
+Definition->Reason9 .*(RW.RWWhy).*(ns|nsf).*
+Definition->Reason10 .*(RW.RWOrdinaryMulti).*(N.RWReason).*
+Definition->Reason11 .*(RW.RWOrdinarySingle).*(N.RWReason).*
+
+Number->Ordinary1 .*(N.NumberNoun).*(RW.RWNumber).*
+Number->Ordinary2 .*(RW.RWNumber).*(N.NumberNoun).*
+Number->Ordinary3 .*(RW.RWNumber).*(N.Concept).*
+Number->Ordinary4 .*(RW.RWOrdinarySingle).*(N.NumberNoun).*
+Number->Ordinary5 .*(RW.RWNumber).*(N.MeasurementUnit).*
+Number->Ordinary6 .*(RW.RWNumber).*(nt).*
+Number->Ordinary7 .*(RW.RWNumber).*(N.NumberCountOfConcept).*
+Number->Ordinary8 .*(RW.RWNumber).*(nr|nr1|nr2|nrj|nrf).*
+Number->Ordinary9 .*(N.ObjectInstrument).*(RW.RWNumber).*
+Number->Ordinary10 .*(N.ObjectInstrument).*(RW.RWNumber).*
+
+Number->Area1 .*(N.NumberAreaOfConcept).*(RW.RWNumber).*
+Number->Area2 .*(N.NumberAreaOfConcept).*(V).*(RW.RWNumber).*
+Number->Area3 .*(N.NumberAreaOfConcept).*(V).*(N.MeasurementUnit).*
+Number->Area4 .*(N.NumberAreaOfConcept).*(V).*(RW.RWNumber).*(N.MeasurementUnit).*
+Number->Area5 .*(V).*(RW.RWNumber).*(N.NumberAreaOfConcept).*
+Number->Area6 .*(V).*(RW.RWNumber).*(N.MeasurementUnit).*
+Number->Area7 .*(RW.RWNumber).*(N.NumberAreaOfConcept).*
+
+Number->Code1 .*(N.NumberCodeOfConcept).*(V).*(RW.RWNumber).*
+Number->Code2 .*(N.NumberCodeOfConcept).*(RW.RWNumber).*
+Number->Code3 .*(N.NumberCodeOfConcept).*(V).*(RW.RWOrdinarySingle).*
+Number->Code4 .*(V).*(RW.RWOrdinarySingle).*(N.NumberCodeOfConcept).*
+Number->Code5 .*(V).*(RW.RWNumber).*(N.Concept).*
+
+Number->Concept1 .*(N.Concept).*(V).*(RW.RWNumber).*(Q).*
+Number->Concept2 .*(N.Concept).*(RW.RWNumber).*(V).*
+Number->Concept3 .*(RW.RWNumber).*(Q).*(N.Concept).*
+Number->Concept4 .*(V).*(RW.RWNumber).*(N.Concept).*
+Number->Concept5 .*(N.Concept).*(V).*(RW.RWNumber).*
+
+Number->Count1 .*(N.NumberCountOfConcept).*(V).*(RW.RWNumber).*
+Number->Count2 .*(V).*(RW.RWNumber).*
+Number->Count3 .*(V).*几.*(Q).*
+Number->Count4 .*(P).*(RW.RWNumber).*
+Number->CountLocation1 .*(ns|nsf).*(RW.RWNumber).*(V).*
+Number->CountLocation2 .*(ns|nsf).*(V).*(RW.RWNumber).*
+Number->CountLocation3 .*(ns|nsf).*(V).*(RW.RWNumber).*(N.NumberCountOfConcept).*
+Number->CountLocation4 .*(ns|nsf).*(V).*(RW.RWNumber).*(Q).*
+Number->CountLocation5 .*(P).*(RW.RWNumber).*(ns|nsf).*
+Number->CountLocation6 .*(RW.RWNumber).*(ns|nsf).*(V).*
+Number->CountPerson1 .*(nr|nr1|nr2|nrj|nrf).*(V).*(RW.RWNumber).*
+Number->CountPerson2 .*(V).*(RW.RWNumber).*(nr|nr1|nr2|nrj|nrf).*
+
+Number->Distance1 .*(V).*(RW.RWNumber).*
+Number->Distance2 .*(RW.RWNumber).*(N.MeasurementUnit).*
+Number->Distance3 .*(N.NumberDistanceOfConcept).*(RW.RWNumber).*
+
+Number->Frequency1 .*(RW.RWNumber).*(N.NumberFrequencyOfConcept).*
+Number->Frequency2 .*(N.NumberFrequencyOfConcept).*(V).*(RW.RWNumber)
+Number->Frequency3 .*(V).*(RW.RWNumber).*(N.MeasurementUnit).*
+Number->Frequency4 .*(V).*(RW.RWOrdinarySingle).*(N.NumberFrequencyOfConcept).*
+Number->Frequency5 .*(RW.RWDescriptive).*(N.NumberFrequencyOfConcept).*(V).*
+
+Number->Price1 .*(N.NumberPriceOfConcept).*(RW.RWNumber).*
+Number->Price1 .*(RW.RWOrdinarySingle).*(N.NumberPriceOfConcept).*
+Number->Price2 .*(RW.RWNumber).*(N.NumberPriceOfConcept).*
+
+Number->Percent .*(N.NumberPercentOfConcept).*(RW.RWNumber).*
+
+Number->Range1 .*(N.NumberRangeOfConcept).*(RW.RWNumber).*
+Number->Range2 .*(N.NumberRangeOfConcept).*(RW.RWDescriptive).*
+Number->Range3 .*(N.NumberRangeOfConcept).*(RW.RWOrdinarySingle).*
+Number->Range4 .*(RW.RWOrdinarySingle).*(N.NumberRangeOfConcept).*
+Number->Range5 .*(RW.RWDescriptive).*(N.NumberRangeOfConcept).*
+Number->Range6 .*(RW.RWNumber).*(N.NumberRangeOfConcept).*
+
+Number->Rank1 .*(N.NumberRankOfConcept).*(RW.RWNumber).*
+Number->Rank2 .*(N.NumberRankOfConcept).*(RW.RWRank).*
+Number->Rank3 .*(N.Concept).*(V).*(RW.RWRank).*
+Number->Rank4 .*(N.NumberNouns).*(V).*(RW.RWRank).*
+Number->Rank5 .*(RW.RWRank).*(N.NumberNouns).*
+Number->ConceptRank .*(RW.RWRank).*(N.Concept).*
+Number->PersonRank .*(RW.RWRank).*(nr|nr1|nr2|nrj|nrf).*
+Number->ConceptRank .*(N.Concept).*(RW.RWRank).*
+Number->LocationRank .*(ns|nsf).*(RW.RWRank).*
+Number->Time .*(RW.RWRank).*(N.TimeOfConcept).*
+Number->Organization .*(RW.RWRank).*(nt).*
+
+Number->Speed1 .*(N.Concept).*(RW.RWSpeed).*
+Number->Speed2 .*(N.AnimalOfConcept).*(RW.RWSpeed).*
+Number->Speed3 .*(N.NumberSpeedOfConcept).*(RW.RWNumber).*
+Number->Speed4 .*(RW.RWNumber).*(N.NumberSpeedOfConcept).*
+Number->Speed5 .*(RW.RWDescriptive).*(N.NumberSpeedOfConcept).*
+Number->Speed6 .*(RW.RWOrdinarySingle).*(N.NumberSpeedOfConcept).*
+Number->Speed7 .*(RW.RWSpeed).*(N.NumberSpeedOfConcept).*
+Number->Speed7 .*(N.NumberSpeedOfConcept).*(RW.RWSpeed).*
+
+Number->Temperature1 .*(ns|nsf).*(RW.RWTemp).*
+Number->Temperature2 .*(N.Concept).*(RW.RWTemp).*
+Number->Temperature3 .*(N.NumberTempOfConcept).*(RW.RWTemp).*
+Number->Temperature4 .*(N.NumberTempOfConcept).*(RW.RWNumber).*
+Number->Temperature5 .*(RW.RWNumber).*(N.NumberTempOfConcept).*
+Number->Temperature6 .*(RW.RWOrdinarySingle).*(N.NumberTempOfConcept).*
+
+Number->Volume1 .*(N.NumberVolumeOfConcept).*(RW.RWNumber).*
+Number->Volume2 .*(RW.RWNumber).*(N.MeasurementUnitOfVolume).*
+
+Number->Weight1 .*(RW.RWWeight).*(N.Concept).*
+Number->Weight2 .*(N.Concept).*(RW.RWWeight).*
+Number->Weight3 .*(nr|nr1|nr2|nrj|nrf).*(RW.RWWeight).*
+Number->Weight3 .*(nr|nr1|nr2|nrj|nrf).*(RW.RWWeight).*(N.MeasurementUnitOfVolume).*
+Number->Weight4 .*(N.Concept).*(RW.RWNumber).*(N.MeasurementUnitOfVolume).*
+Number->Weight5 .*(RW.RWNumber).*(N.NumberVolumeOfConcept).*
+Number->Weight6 .*(N.NumberVolumeOfConcept).*(RW.RWNumber).*
+Number->Weight7 .*(N.AnimalOfConcept).*(RW.RWWeight).*
+
+Time->Ordinary1 .*(V).*(RW.RWOrdinarySingle).*(N.TimeOfConcept).*
+Time->Ordinary2 .*(N.Concept).*(RW.RWOrdinaryMulti).*(N.TimeOfConcept).*
+Time->Ordinary4 .*(V).*(RW.RWOrdinaryMulti).*(N.TimeOfConcept).*
+Time->Ordinary5 .*(RW.RWTime).*(V).*
+Time->Ordinary6 .*(RW.RWOrdinarySingle).*(N.TimeOfConcept).*
+Time->Ordinary7 .*(RW.RWOrdinaryMulti).*(N.TimeOfConcept).*
+Time->Ordinary8 .*(nr|nr1|nr2|nrj|nrf).*(V).*(RW.RWTime).*
+Time->Holiday .*(N.TimeOfConcept).*(V).*(RW.RWOrdinarySingle).*
+
+Time->Date1 .*(N.Concept).*(RW.RWTimeDate).*
+Time->Date2 .*(N.TimeOfConcept).*(RW.RWTimeDate).*
+Time->Date3 .*(N.Concept).*(RW.RWTimeDate).*(V).*
+Time->Date4 .*(nr|nr1|nr2|nrj|nrf).*(P).*(RW.RWTimeDate).*
+Time->Date5 .*(nr|nr1|nr2|nrj|nrf).*(RW.RWTimeDate).*
+Time->Date5 .*(ns|nsf).*(RW.RWTimeDate).*(V).*
+Time->Date6 .*(nt).*(RW.RWTimeDate).*(V).*
+Time->Date7 .*(V).*(P).*(RW.RWTimeDate).*
+Time->Date8 .*(RW.RWTimeDate).*(N.Concept).*
+Time->Date9 .*(RW.RWTimeDate).*(N.TimeOfConcept).*
+Time->Date10 .*(RW.RWTimeDate).*(V).*(N.Concept).*
+Time->Date11 .*(RW.RWTimeDate).*(ns|nsf).*(V).*
+Time->Date12 .*(RW.RWTimeDate).*(nr|nr1|nr2|nrj|nrf).*(V).*
+Time->Date13 .*(RW.RWTimeDate).*(V).*(N.TimeOfConcept).*
+
+Time->Month1 .*(N.TimeOfConcept).*(RWTimeMonth).*
+Time->Month2 .*(N.Concept).*(RWTimeMonth).*
+Time->Month3 .*(ns|nsf).*(RW.RWTimeMonth).*
+Time->Month4 .*(RWTimeMonth).*(V).*
+Time->Month5 .*(RWTimeMonth).*(N.Concept).*
+Time->Month6 .*(P).*(RWTimeMonth).*
+
+Time->Year1 .*(N.Concept).*(RW.RWTimeYear).*
+Time->Year2 .*(P).*(RW.RWTimeYear).*
+Time->Year3 .*(V).*(RW.RWTimeYear).*
+Time->Year4 .*(RW.RWTimeYear).*(V).*
+Time->Year5 .*(ns|nsf).*(RW.RWTimeYear).*
+
+Time->Period1 .*(RW.RWTimeYear).*
+Time->Period2 .*(N.AnimalOfConcept).*(V).*(RW.RWTimeYear).*
+Time->Period3 .*(N.Concept).*(V).*(RW.RWTimeYear).*
+Time->Period4 .*(N.CONCEPT).*(RW.RWTime).*
+Time->Period5 .*(nr|nr1|nr2|nrj|nrf).*(V).*(RW.RWNumber).*
+Time->Period6 .*(nr|nr1|nr2|nrj|nrf).*(RW.RWNumber).*
+Time->Period7 .*(N.TimeOfConcept).*(RW.RWTimeYear).*
+Time->Period8 .*(N.TimeOfConcept).*(RW.RWNumber).*
+Time->Period9 .*(N.TimeOfConcept).*(RW.RWTime).*
+Time->Period10 .*(RW.RWNumber).*(N.TimeOfConcept).*
+Time->Period11 .*(RW.RWTime).*(V).*(N.Concept).*
+Time->Period12 .*(RW.RWTime).*(V).*(ns|nsf).*
+
+Time->Solarterm1 .*(N.TimeSolartermOfConcept).*(V).*(RW.RWOrdinarySingle).*
+Time->Solarterm2 .*(RW.RWOrdinarySingle).*(N.TimeSolartermOfConcept).*
+Time->Solarterm2 .*(N.TimeSolartermOfConcept).*
+
+Time->Time .*(RW.RWTimeHour).*
+Time->Week .*(RW.RWTimeWeek).*
+
+Object->AcademicSingle .*(RW.RWOrdinarySingle).*(N.ObjectAcademic).*
+Object->AcademicMulti .*(RW.RWOrdinaryMulti).*(N.ObjectAcademic).*
+Object->Academic1 .*(N.ObjectAcademic).*(RW.RWOrdinaryMulti).*
+Object->Academic2 .*(RW.RWAcademic).*(N.ObjectAcademic).*
+Object->Academic3 .*(N.ObjectAcademic).*(V).*(RW.RWOrdinarySingle).*
+Object->Academic4 .*(N.ObjectAcademic).*(V).*(RW.RWOrdinaryMulti).*
+Object->Academic5 .*(N.ObjectAcademic).*(RW.RWDescriptive).*(V).*
+Object->Academic6 .*(N.ObjectAcademic).*(RW.RWAcademic).*
+
+Object->AnimalSingle .*(N.AnimalOfConcept).*(V).*(RW.RWOrdinarySingle).*
+Object->AnimalMulti .*(N.AnimalOfConcept).*(V).*(RW.RWOrdinaryMulti).*
+Object->AnimalName .*(N.AnimalOfConcept).*(V).*(RW.RWPersonSingle).*
+Object->Animal1 .*(V).*(RW.RWOrdinarySingle).*(N.AnimalOfConcept).*
+Object->AnimalSigns .*(RW.RWAnimalSigns).*
+Object->Animal2 .*(V).*(RW.RWOrdinarySingle).*(N.AnimalOfConcept).*
+Object->Animal3 .*(N.AnimalOfConcept).*(N.NameOfConcept).*(V).*(RW.RWOrdinarySingle).*
+Object->Animal4 .*(P).*(RW.RWOrdinarySingle).*(N.AnimalOfConcept).*
+Object->Animal5 .*(RW.RWOrdinarySingle).*(N.AnimalOfConcept).*
+
+Object->ArtSingle1 .*(N.ObjectArt).*(V).*(RW.RWOrdinarySingle).*
+Object->ArtSingle2 .*(V).*(RW.RWOrdinarySingle).*(N.ObjectArt).*
+Object->ArtSingle3 .*(RW.RWOrdinarySingle).*(N.ObjectArt).*
+Object->ArtMulti1 .*(N.ObjectArt).*(V).*(RW.RWOrdinaryMulti).*
+Object->ArtMulti2 .*(V).*(RW.RWOrdinaryMulti).*(N.ObjectArt).*
+Object->ArtMulti3 .*(RW.RWOrdinaryMulti).*(N.ObjectArt).*
+Object->ArtSong1 .*(V).*(RW.RWArt).*(N.ObjectArt).*
+Object->ArtSong2 .*(V).*(N.ObjectArt).*
+Object->ArtMovie1 .*(RW.RWArt).*(N.ObjectArt).*(V).*
+Object->Album .*(V).*(RW.RWArt).*(N.ObjectArt).*
+
+Object->Award .*(RW.RWOrdinaryMulti).*(N.ObjectAward).*
+Object->Bill .*(N.ObjectBill).*(V).*(RW.RWOrdinaryMulti).*
+Object->BodyPart1 .*(RW.RWOrdinarySingle).*(N.ObjectBodyPart).*
+Object->BodyPart2 .*(RW.RWOrdinarySingle).*(N.ObjectBodyPart).*(V).*
+Object->BodyPart3 .*(N.AnimalOfConcept).*(N.ObjectBodyPart).*
+Object->BodyPart4 .*(N.ObjectBodyPart).*(V).*(RW.RWOrdinarySingle).*
+Object->BodyPart5 .*(P).*(RW.RWOrdinarySingle).*(N.ObjectBodyPart).*
+Object->BodyPart6 .*(N.ObjectBodyPart).*(V).*
+Object->BodyPart6 .*(N.ObjectBodyPart).*(P).*(RW.RWLocationSingle).*
+Object->BodyPart7 .*(V).*(RW.RWOrdinarySingle).*(N.ObjectBodyPart).*
+
+Object->Category1 .*(RW.RWOrdinarySingle).*(N.ObjectCategory).*(V).*
+Object->Category2 .*(RW.RWOrdinarySingle).*(N.ObjectCategory).*
+Object->Category3 .*(P).*(N.ObjectCategory).*
+Object->CategorySingle1 .*(V).*(RW.RWOrdinarySingle).*(N.ObjectCategory).*
+Object->CategorySingle2 .*(N.ObjectCategory).*(V).*(RW.RWOrdinarySingle).*
+Object->CategoryMulti1 .*(V).*(RW.RWOrdinaryMulti).*(N.ObjectCategory).*
+Object->CategoryMulti2 .*(N.ObjectCategory).*(V).*(RW.RWOrdinaryMulti).*
+Object->Category4 .*(N.ObjectCategory).*(V).*(RW.RWOrdinarySingle).*
+
+Object->ClothingSingle .*(V).*(RW.RWOrdinarySingle).*(N.ObjectClothing).*
+Object->ClothingMulti .*(V).*(RW.RWOrdinaryMulti).*(N.ObjectClothing).*
+Object->Clothing2 .*(RW.RWClothing).*
+Object->Clothing3 .*(N.ObjectClothing).*(V).*(RW.RWOrdinarySingle).*
+
+Object->Color1 .*(V).*(RW.RWOrdinarySingle).*(N.ColorOfConcept).*
+Object->Color2 .*(N.ColorOfConcept).*(V).*(RW.RWOrdinarySingle).*
+Object->Color3 .*(RW.RWOrdinaryMulti).*(N.ColorOfConcept).*(V).*
+Object->Color4 .*(RW.RWOrdinaryMulti).*(N.ColorOfConcept).*
+Object->Color5 .*(RW.RWOrdinarySingle).*(N.ColorOfConcept).*
+Object->Color6 .*(N.ColorOfConcept).*(V).*(RW.RWOrdinaryMulti).*
+
+Object->Currency1 .*(V).*(RW.RWOrdinarySingle).*(N.ObjectCurrency).*
+Object->Currency2 .*(P).*(RW.RWOrdinarySingle).*(N.ObjectCurrency).*
+Object->Currency3 .*(N.ObjectCurrency).*(V).*(RW.RWOrdinarySingle).*
+Object->Currency4 .*(RW.RWOrdinarySingle).*(N.ObjectCurrency).*
+
+Object->Disease1 .*(V).*(RW.RWOrdinarySingle).*(N.ObjectDisease).*
+Object->Disease2 .*(RW.RWOrdinaryMulti).*(N.ObjectDisease).*
+Object->Disease3 .*(N.ObjectDisease).*(V).*(RW.RWOrdinaryMulti).*
+Object->Disease4 .*(N.ObjectDisease).*(V).*(RW.RWOrdinarySingle).*
+Object->Disease5 .*(RW.RWOrdinarySingle).*(N.ObjectDisease).*
+
+Object->Event1 .*(V).*(RW.RWOrdinarySingle).*(N.ObjectEvent).*
+Object->Event2 .*(V).*(RW.RWOrdinaryMulti).*(N.ObjectEvent).*
+Object->Event3 .*(N.ObjectEvent).*(V).*(RW.RWOrdinaryMulti).*
+Object->Event4 .*(N.ObjectEvent).*(V).*
+Object->Event5 .*(V).*(N.ObjectEvent).*
+Object->Event6 .*(RW.RWOrdinarySingle).*(N.ObjectEvent).*
+
+Object->FoodSingle .*(N.ObjectFood).*(V).*(RW.RWOrdinarySingle).*
+Object->FoodMulti .*(N.ObjectFood).*(V).*(RW.RWOrdinaryMulti).*
+Object->Food1 .*(V).*(RW.RWOrdinarySingle).*(N.ObjectFood).*
+Object->Food2 .*(P).*(RW.RWOrdinarySingle).*(N.ObjectFood).*
+Object->Food3 .*(RW.RWOrdinarySingle).*(N.ObjectFood).*
+Object->Food4 .*(RW.RWOrdinaryMulti).*(N.ObjectFood).*
+Object->Food5 .*(RW.RWDescriptive).*(N.ObjectFood).*
+Object->Food6 .*(RW.RWFood).*(N.ObjectFood).*
+Object->Food7 .*(RW.RWFood).*
+
+Object->Instrument1 .*(V).*(RW.RWOrdinarySingle).*(N.ObjectInstrument).*
+Object->Instrument2 .*(RW.RWOrdinarySingle).*(N.ObjectInstrument).*
+Object->Instrument3 .*(RW.RWOrdinaryMulti).*(N.ObjectInstrument).*
+Object->Instrument4 .*(N.ObjectInstrument).*(RW.RWOrdinarySingle).*
+Object->InstrumentSingle .*(N.ObjectInstrument).*(V).*(RW.RWOrdinarySingle).*
+Object->InstrumentMulti1 .*(N.ObjectInstrument).*(V).*(RW.RWOrdinaryMulti).*
+Object->InstrumentMulti2 .*(N.ObjectInstrument).*(P).*(RW.RWOrdinaryMulti).*
+Object->Instrument5 .*(RW.RWOrdinarySingle).*(N.ObjectTrademark).*(N.ObjectInstrument).*
+
+Object->LanguageLocation .*(RW.RWLocationSingle).*(N.LanguageOfConcept).*
+Object->LanguageSingle1 .*(V).*(RW.RWOrdinarySingle).*(N.LanguageOfConcept).*
+Object->LanguageSingle2 .*(P).*(RW.RWOrdinarySingle).*(N.LanguageOfConcept).*
+Object->LanguageSingle3 .*(N.LanguageOfConcept).*(V).*(RW.RWOrdinarySingle).*
+Object->LanguageSingle4 .*(RW.RWOrdinarySingle).*(N.LanguageOfConcept).*(V).*
+Object->LanguageSingle5 .*(RW.RWOrdinarySingle).*(N.LanguageOfConcept).*
+Object->LanguageMulti1 .*(N.LanguageOfConcept).*(V).*(RW.RWOrdinaryMulti).*
+Object->LanguageMulti2 .*(V).*(RW.RWOrdinaryMulti).*(N.LanguageOfConcept).*
+
+Object->LiteratureSingle1 .*(RW.RWOrdinarySingle).*(N.ObjectLiterature).*
+Object->LiteratureMulti3 .*(RW.RWOrdinaryMulti).*(N.ObjectLiterature).*
+Object->LiteratureSingle2 .*(N.ObjectLiterature).*(V).*(RW.RWOrdinarySingle).*
+Object->LiteratureSingle6 .*(N.ObjectLiterature).*(V).*(RW.RWArt).*
+Object->LiteratureMulti2 .*(N.ObjectLiterature).*(P).*(RW.RWOrdinarySingle).*
+Object->LiteratureMulti1 .*(N.ObjectLiterature).*(V).*(RW.RWOrdinaryMulti).*
+Object->LiteratureSingle3 .*(V).*(RW.RWOrdinarySingle).*(N.ObjectLiterature).*
+Object->LiteratureSingle4 .*(P).*(RW.RWOrdinarySingle).*(N.ObjectLiterature).*
+Object->LiteratureSingle5 .*(N.ObjectLiterature).*(RW.RWOrdinarySingle).*
+Object->LiteraturePerson .*(V).*(RW.RWOrdinaryMulti).*(N.ObjectAcademic).*
+Object->Literature .*(RW.RWLiterature).*
+
+Object->Material1 .*(N.ObjectMaterial).*(V).*(RW.RWOrdinarySingle).*
+Object->Material2 .*(V).*(RW.RWOrdinarySingle).*(N.ObjectMaterial).*
+Object->Material3 .*(V).*(RW.RWOrdinaryMulti).*(N.ObjectMaterial).*
+Object->Material4 .*(N.ObjectMaterial).*(V).*(RW.RWOrdinarySingle).*
+Object->Material5 .*(N.ObjectMaterial).*(V).*(RW.RWOrdinaryMulti).*
+Object->Material6 .*(RW.RWOrdinarySingle).*(N.ObjectMaterial).*(V).*
+Object->Material7 .*(RW.RWOrdinarySingle).*(N.ObjectMaterial).*
+
+Object->Micorobe1 .*(N.ObjectMicorobe).*(V).*(RW.RWOrdinarySingle).*
+Object->Micorobe2 .*(V).*(RW.RWOrdinarySingle).*(N.ObjectMicorobe).*
+Object->Micorobe3 .*(RW.RWOrdinarySingle).*(N.ObjectMicorobe).*
+
+Object->Offense .*(V).*(RW.RWOrdinarySingle).*(N.ObjectOffense).*
+
+Object->Plan1 .*(N.ObjectPlan).*(V).*(RW.RWOrdinarySingle).*
+
+Object->Plant1 .*(N.ObjectPlant).*(V).*(RW.RWOrdinarySingle).*
+Object->PlantSingle1 .*(RW.RWOrdinarySingle).*(N.ObjectPlant).*
+Object->PlantMulti .*(RW.RWOrdinaryMulti).*(N.ObjectPlant).*
+Object->PlantSingle3 .*(RW.RWOrdinarySingle).*(N.ObjectPlant).*
+Object->LocationPlant .*(ns|nsf).*(N.ObjectPlant).*
+Object->PlantSingle2 .*(V).*(RW.RWOrdinarySingle).*(N.ObjectPlant).*
+
+Object->ReligionMulti1 .*(V).*(RW.RWOrdinaryMulti).*(N.ObjectReligion).*
+Object->ReligionMulti2 .*(RW.RWOrdinaryMulti).*(N.ObjectReligion).*
+Object->ReligionSingle2 .*(RW.RWOrdinarySingle).*(N.ObjectReligion).*
+Object->ReligionMulti3 .*(N.ObjectReligion).*(V).*(RW.RWOrdinaryMulti).*
+Object->ReligionSingle1 .*(V).*(RW.RWOrdinarySingle).*(N.ObjectReligion).*
+Object->ReligionSingle2 .*(P).*(RW.RWOrdinarySingle).*(N.ObjectReligion).*
+Object->ReligionSingle3 .*(N.ObjectReligion).*(V).*(RW.RWOrdinarySingle).*
+Object->ReligionSingle4 .*(RW.RWOrdinarySingle).*(N.ObjectReligion).*(V).*
+Object->ReligionSingle5 .*(RW.RWOrdinarySingle).*(N.ObjectReligion).*(P).*
+
+Object->RightSingle1 .*(V).*(RW.RWOrdinarySingle).*(N.ObjectRight).*
+Object->RightSingle1 .*(N.ObjectRight).*(V).*(RW.RWOrdinarySingle).*
+Object->RightMulti1 .*(V).*(RW.RWOrdinaryMulti).*(N.ObjectRight).*
+Object->RightMulti2 .*(N.ObjectRight).*(V).*(RW.RWOrdinaryMulti).*
+
+Object->RuleSingle1 .*(V).*(RW.RWOrdinarySingle).*(N.ObjectRule).*
+Object->RuleSingle2 .*(P).*(RW.RWOrdinarySingle).*(N.ObjectRule).*
+Object->RuleMulti1 .*(V).*(RW.RWOrdinaryMulti).*(N.ObjectRule).*
+Object->RuleMulti2 .*(N.ObjectRule).*(V).*(RW.RWOrdinaryMulti).*
+
+Object->ServiceMulti1 .*(N.ObjectService).*(V).*(RW.RWOrdinaryMulti).*
+Object->ServiceSingle1 .*(N.ObjectService).*(V).*(RW.RWOrdinarySingle).*
+Object->ServiceSingle2 .*(RW.RWOrdinarySingle).*(N.ObjectService).*(V).*
+Object->ServiceSingle3 .*(RW.RWOrdinarySingle).*(N.ObjectService).*
+
+Object->SportsMulti1 .*(N.ObjectSports).*(V).*(RW.RWOrdinaryMulti).*
+Object->SportsMulti2 .*(N.ObjectSports).*(V).*(RW.RWOrdinaryMulti).*
+Object->SportsMulti3 .*(RW.RWOrdinaryMulti).*(N.ObjectSports).*(V).*
+Object->SportsSingle1 .*(N.ObjectSports).*(V).*(RW.RWOrdinarySingle).*
+Object->SportsSingle2 .*(N.ObjectSports).*(RW.RWOrdinarySingle).*(V).*
+Object->SportsSingle3 .*(RW.RWOrdinarySingle).*(N.ObjectSports).*(V).*
+Object->SportsSingle4 .*(RW.RWOrdinarySingle).*(N.ObjectSports).*
+Object->SportsSingle5 .*(V).*(RW.RWOrdinarySingle).*(N.ObjectSports).*
+Object->SportsSingle6 .*(P).*(RW.RWOrdinarySingle).*(N.ObjectSports).*
+Object->Sports .*(V).*(N.ObjectSports).*
+
+Object->Substance1 .*(N.ObjectSubstance).*(N.NameOfConcept).*(V).*(RW.RWOrdinarySingle).*
+Object->Substance2 .*(V).*(RW.RWOrdinaryMulti).*(N.ObjectSubstance).*
+Object->Substance7 .*(V).*(RW.RWOrdinarySingle).*(N.ObjectSubstance).*
+Object->Substance8 .*(P).*(RW.RWOrdinarySingle).*(N.ObjectSubstance).*
+Object->Substance3 .*(N.ObjectSubstance).*(V).*(RW.RWOrdinaryMulti).*
+Object->Substance4 .*(RW.RWOrdinaryMulti).*(N.ObjectSubstance).*
+Object->Substance8 .*(RW.RWOrdinarySingle).*(N.ObjectSubstance).*
+Object->Substance5 .*(N.ObjectSubstance).*(P).*(RW.RWOrdinarySingle).*
+Object->Substance6 .*(N.ObjectSubstance).*(V).*(RW.RWOrdinarySingle).*
+Object->Substance7 .*(RW.RWOrdinaryMulti).*(N.ObjectSubstance).*
+
+Object->Symbol1 .*(N.ObjectSymbol).*(V).*(RW.RWOrdinarySingle).*
+Object->Symbol2 .*(V).*(RW.RWOrdinarySingle).*(N.ObjectSymbol).*
+
+Object->Vocation1 .*(nr|nr1|nr2|nrj|nrf).*(V).*(RW.RWDescriptive).*
+Object->Vocation2 .*(V).*(RW.RWOrdinarySingle).*(N.ObjectVocation).*
+Object->Vocation6 .*(V).*(RW.RWOrdinaryMulti).*(N.ObjectVocation).*
+Object->Vocation3 .*(N.ObjectVocation).*(V).*(RW.RWOrdinarySingle).*
+Object->Vocation4 .*(RW.RWOrdinarySingle).*(N.ObjectVocation).*
+Object->Vocation5 .*(RW.RWOrdinaryMulti).*(N.ObjectVocation).*
+Object->Vocation6 .*(RW.RWDescriptive).*(N.ObjectVocation).*
+
+Object->TermMulti1 .*(N.ObjectTerm).*(V).*(RW.RWOrdinaryMulti).*
+Object->TermSingle1 .*(N.ObjectTerm).*(V).*(RW.RWOrdinarySingle).*
+Object->TermSingle2 .*(V).*(RW.RWOrdinarySingle).*(N.ObjectTerm).*
+Object->TermMulti2 .*(V).*(RW.RWOrdinaryMulti).*(N.ObjectTerm).*
+
+Object->Title1 .*(V).*(RW.RWOrdinarySingle).*(N.ObjectTitle).*
+Object->Title2 .*(V).*(RW.RWOrdinaryMulti).*(N.ObjectTitle).*
+Object->Title3 .*(N.ObjectTitle).*(V).*(RW.RWOrdinaryMulti).*
+Object->Title4 .*(N.ObjectTitle).*(V).*(RW.RWOrdinarySingle).*
+Object->Title5 .*(N.ObjectTitle).*(P).*(RW.RWOrdinaryMulti).*
+Object->Title6 .*(N.ObjectTitle).*(P).*(RW.RWOrdinarySingle).*
+
+Object->OtherSingle1 .*(V).*(RW.RWOrdinarySingle).*(N.Object).*
+Object->OtherSingle2 .*(N.Object).*(V).*(RW.RWOrdinarySingle).*
+Object->OtherSingle3 .*(N.Object).*(P).*(RW.RWOrdinarySingle).*
+Object->OtherMulti1 .*(V).*(RW.RWOrdinaryMulti).*(N.Object).*
+Object->OtherMulti4 .*(P).*(RW.RWOrdinaryMulti).*(N.Object).*
+Object->OtherMulti2 .*(N.Object).*(V).*(RW.RWOrdinaryMulti).*
+Object->OtherMulti3 .*(RW.RWOrdinaryMulti).*(N.Object).*(V).*

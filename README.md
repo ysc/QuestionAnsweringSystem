@@ -47,7 +47,7 @@ QuestionAnsweringSystem是一个Java实现的人机问答系统，能够自动�
 API接口：
 
 	调用地址：
-		http://localhost:8080/QuestionAnsweringSystem/api/ask?n=1&q=APDPlat的作者是谁？
+		http://121.40.143.109:8080/QuestionAnsweringSystem/api/ask?n=1&q=APDPlat的作者是谁？
 	参数：
 		n表示需要返回的答案的个数
 		q表示问题
@@ -64,9 +64,10 @@ API接口：
 			
 使用说明：
 
-1、初始化MySQL数据库：   
+1、初始化MySQL数据库(MySQL作为数据缓存区使用，此步骤可选)：   
 
-    在MySQL命令行中执行QuestionAnsweringSystem\src\main\resources\mysql\questionanswer.sql文件中的脚本   
+    在MySQL命令行中执行QuestionAnsweringSystem\deep-qa\src\main\resources\mysql\questionanswer.sql文件中的脚本   
+    MySQL编码：UTF-8，
     主机：127.0.0.1
     端口：3306
     数据库：questionanswer
@@ -77,11 +78,27 @@ API接口：
 
     cd QuestionAnsweringSystem   
     mvn install   
-    cp target\QuestionAnsweringSystem-1.0.war apache-tomcat-7.0.37/webapps/QuestionAnsweringSystem-1.0.war   
+    cd deep-qa-web\target
+    cp deep-qa-web-1.1.war apache-tomcat-7.0.37/webapps/QuestionAnsweringSystem.war   
     启动tomcat
 	
 3、打开浏览器访问：
 
-    http://localhost:8080/QuestionAnsweringSystem-1.0/
+    http://localhost:8080/QuestionAnsweringSystem/
 	
 [可部署war包下载](http://pan.baidu.com/s/1hq9pekc)
+
+深入了解：
+
+    QuestionAnsweringSystem由2个子项目构成，deep-qa和deep-qa-web。
+    deep-qa是核心部分，deep-qa-web提供web界面来和用户交互，同时也提供了Json Over HTTP的访问接口，便于异构系统的集成。
+    deep-qa是一个jar包，可通过maven引用：
+    
+        <dependency>
+            <groupId>org.apdplat</groupId>
+            <artifactId>deep-qa</artifactId>
+            <version>1.1</version>
+        </dependency>
+
+    引入依赖后，需要将依赖deep-qa-1.1.jar包中的dic和questionTypePatterns解压出来，放到自己的类路径下。
+    dic是中文分词组件依赖的词库，questionTypePatterns是问题类别分析依赖的模式定义，可根据自己的需要修改。

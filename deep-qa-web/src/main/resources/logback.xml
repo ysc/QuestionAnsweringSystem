@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration>
+    <appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <Pattern>%m%n</Pattern>
+        </layout>
+    </appender>
+    <appender name="logfile" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <File>logs/logback.log</File>
+        <rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">  
+            <FileNamePattern>logs/logback_%i.log</FileNamePattern>
+            <MinIndex>1</MinIndex>  
+            <MaxIndex>10000</MaxIndex>
+        </rollingPolicy>  
+        <triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">  
+            <MaxFileSize>5MB</MaxFileSize> 
+        </triggeringPolicy> 
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <Pattern>%m%n</Pattern>j
+        </layout>
+    </appender>
+  
+    <logger name="org.apdplat.qa.util.NekoHTMLUtils" level="INFO"/>
+    <logger name="org.apdplat.qa.datasource.BaiduDataSource" level="INFO"/>
+    <logger name="org.apdplat.qa.model" level="INFO"/>
+    <logger name="org.apdplat.qa.util" level="INFO"/>
+    <logger name="org.apdplat.qa.score.evidence.BigramEvidenceScore" level="INFO"/>
+    <logger name="org.apdplat.qa.score.evidence.SkipBigramEvidenceScore" level="INFO"/>
+    <logger name="org.apdplat.qa.score.evidence.TermMatchEvidenceScore" level="INFO"/>
+  
+    <logger name="org.apdplat.qa.score.answer.MoreTextualAlignmentCandidateAnswerScore" level="INFO"/>
+    <logger name="org.apdplat.qa.score.answer.HotCandidateAnswerScore" level="INFO"/>
+    <logger name="org.apdplat.qa.score.answer.RewindTextualAlignmentCandidateAnswerScore" level="INFO"/>
+    <logger name="org.apdplat.qa.score.answer.TermDistanceCandidateAnswerScore" level="INFO"/>
+    <logger name="org.apdplat.qa.score.answer.TermDistanceMiniCandidateAnswerScore" level="INFO"/>
+    <logger name="org.apdplat.qa.score.answer.TermFrequencyCandidateAnswerScore" level="INFO"/>
+    <logger name="org.apdplat.qa.score.answer.TextualAlignmentCandidateAnswerScore" level="INFO"/>
+    <logger name="org.apache.commons" level="ERROR"/>
+    <logger name="httpclient" level="ERROR"/>
+    <root level="INFO">
+        <appender-ref ref="logfile"/>
+        <appender-ref ref="stdout"/>
+    </root>
+</configuration>

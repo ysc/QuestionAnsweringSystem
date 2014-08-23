@@ -1,0 +1,201 @@
+PersonOfDis->Multi1 .*(RW.RWOrdinaryMulti)/(nr|nr1|nr2|nrj|nrf).*
+PersonOfDis->Single1 .*(RW.RWOrdinarySingle)/(nr|nr1|nr2|nrj|nrf).*
+PersonOfDis->Single2 .*(RW.RWPersonSingle)/(nr|nr1|nr2|nrj|nrf).*
+
+LocationOfDis->Multi1 .*(RW.RWOrdinaryMulti)/(ns|nsf).*
+LocationOfDis->Multi2 .*(RW.RWLocationMulti)/(ns|nsf).*
+LocationOfDis->Multi3 .*(V).*哪.*(M.)(ns|nsf)
+LocationOfDis->Single1 .*(RW.RWOrdinarySingle)/(ns|nsf).*
+LocationOfDis->Single2 .*(RW.RWLocationSingle)/(ns|nsf).*
+LocationOfDis->Single3 .*(ns|nsf)/(V)/(RW.RWOrdinaryMulti).*
+LocationOfSOB->Single4 .*(ns|nsf)/(V)/(RW.RWOrdinarySingle).*
+
+OrganizationOfDis->Multi2 .*(RW.RWOrdinaryMulti)/(nt).*
+OrganizationOfDis->Multi3 .*(RW.RWOrganizationMulti)/(nt).*
+OrganizationOfDis->Single1 .*(RW.RWOrdinarySingle)/(nt).*
+OrganizationOfDis->Single2 .*(RW.RWOrganizationSingle)/(nt).*
+OrganizationOfSOB->Single1 .*(nt)/(V)/(RW.RWOrdinarySingle).*
+
+DefinitionDis->Comparison .*(N.Concept).*(RW.RWComparisonAdj).*
+DefinitionDis->DescriptiveMulti .*(V).*(RW.RWOrdinaryMulti).*(N.Concept).*
+DefinitionDis->DescriptiveSingle .*(V).*(RW.RWOrdinarySingle).*(N.Concept).*
+DefinitionDis->MethodDescriptive1 .*(N.MethodOfConcept)/(V).*
+DefinitionDis->MethodDescriptive2 .*(RW.RWOrdinarySingle)/(N.MethodOfConcept).*
+DefinitionDis->MethodDescriptive3 .*(RW.RWOrdinarySingle)/(N.MethodOfConcept)/(V).*
+DefinitionDis->MethodDescriptive4 .*(N.MethodOfConcept)/(V)/(RW.RWOrdinarySingle).*
+DefinitionDis->MethodDescriptiveSingle .*(V).*(RW.RWOrdinarySingle).*(N.MethodOfConcept).*
+DefinitionSOB->MeaningDescriptive1 .*(N.MeaningOfConcept)/(V)/(RW.RWOrdinarySingle).*
+DefinitionSOB->MeaningDescriptive2 .*(V)/(RW.RWOrdinarySingle)/(N.MeaningOfConcept).*
+DefinitionDis->MeaningDescriptive3 .*(RW.RWOrdinaryMulti)/(N.MeaningOfConcept).*
+DefinitionSOB->Language .*(N.LanguageOfConcept).*(V.).*(RW.RWOrdinarySingle).*
+DefinitionSOB->SubjectVerb .*(N.Concept)/(V).*
+DefinitionSOB->SubjectVerbObject1 .*(RW.RWOrdinarySingle)/(V)/(N.Concept).*
+DefinitionSOB->SubjectVerbObject2 .*(RW.RWOrdinarySingle).*(V).*(N.Concept).*
+
+DefinitionSOB->ConceptDescriptive1 .*(RW.RWDescriptive)/(V)/(N.Concept).*
+DefinitionSOB->ConceptDescriptive2 .*(N.Concept)/(RW.RWDescriptive)/(V).*
+DefinitionSOB->ConceptDescriptiveMulti .*(N.Concept).*(V).*(RW.RWOrdinaryMulti).*
+DefinitionSOB->ConceptDescriptiveSingle .*(N.Concept).*(V).*(RW.RWOrdinarySingle).*
+DefinitionSOB->ReasonSingle1 .*(N.RWReason).*(V).*(RW.RWOrdinarySingle).*
+DefinitionSOB->ReasonSingle2 .*(V)/(RW.RWOrdinarySingle)/(N.RWReason).*
+DefinitionDis->ReasonSingle2 .*(RW.RWOrdinarySingle).*(N.RWReason)
+DefinitionSOB->ReasonMulti1 .*(N.RWReason).*(V.).*(RW.RWOrdinaryMulti).*
+DefinitionSOB->ReasonMulti2 .*(N.RWReason).*(V.).*(RW.RWOrdinarySingle).*
+DefinitionDis->ReasonWhy .*(V).*(RW.RWWhy).*
+DefinitionDis->ReasonKeywords .*由什么引起.*
+DefinitionDis->AnimalSingle .*(RW.RWOrdinarySingle)/(N.AnimalOfConcept).*
+DefinitionDis->AnimalMulti .*(RW.RWOrdinaryMulti)/(N.AnimalOfConcept).*
+DefinitionSOB->AnimalDescriptiveMulti .*(N.AnimalOfConcept).*(V).*(RW.RWOrdinaryMulti)/(N.MeaningOfConcept).*
+DefinitionSOB->AnimalDescriptiveSingle .*(N.AnimalOfConcept).*(V).*(RW.RWOrdinarySingle)/(N.MeaningOfConcept).*
+Definition->GeneralQuestion .*吗.*
+
+NumberAreaSOB->Area1 .*(V)/(RW.RWNumber)/(N.NumberAreaOfConcept).*
+NumberCodeSOB->Code1 .*(N.NumberCodeOfConcept)/(V)/(RW.RWNumber).*
+NumberCodeSOB->Code2 .*(N.NumberCodeOfConcept)/(V)/(RW.RWOrdinarySingle).*
+NumberCountSOB->Count .*(RW.RWNumber)/(N.Concept).*
+NumberPercentSOB->Count .*(RW.RWNumber)/(N.NumberNouns).*
+NumberRangeSOB->Range1 .*(N.NumberRangeOfConcept)/(V)/(RW.RWOrdinarySingle).*
+NumberRangeSOB->Range2 .*(N.NumberRangeOfConcept)/(V)/(RW.RWDescriptive).*
+NumberSpeedSOB->Speed1 .*(RW.RWDescriptive)/(N.NumberSpeedOfConcept).*
+NumberSpeedSOB->Speed2 .*(RW.RWOrdinarySingle)/(N.NumberSpeedOfConcept).*
+NumberTemperatureSOB->Temperature1 .*(RW.RWOrdinarySingle)/(N.NumberTempOfConcept).*
+NumberTemperatureSOB->Temperature2 .*(RW.RWTemp).*
+
+TimePeriodSOB->Age .*(RW.RWNumber)/(N.TimeOfConcept).*
+TimeDateSOB->Date1 .*(N.TimeOfConcept)/(RW.RWTimeDate).*
+TimeDateSOB->Date2 .*(RW.RWTimeDate)/(V).*
+TimeDynastySOB->Dynasty1 .*(RW.RWOrdinarySingle)/(N.TimeOfConcept).*
+TimeDynastySOB->Dynasty2 .*(nr|nr1|nr2|nrj|nrf).*(V)/(RW.RWOrdinarySingle)/(N.TimeOfConcept).*
+TimeMonthSOB->Month1 .*(RW.RWOrdinaryMulti)/(N.TimeOfConcept).*
+TimeMonthSOB->Month2 .*(RW.RWTimeMonth).*
+TimeYearSOB->Year1 .*(P)/(RW.RWTimeYear).*
+TimeYearSOB->Year2 .*(V)/(RW.RWTimeYear).*
+TimeYearSOB->Year3 .*(RW.RWTimeYear)/(P).*
+TimeYearSOB->Year4 .*(RW.RWTimeYear)/(V).*
+TimeOtherSOB->Other1 .*(RW.RWTimeYear).*(RW.RWTimeYear).*
+TimeOtherSOB->Other2 .*(V)/(RW.RWOrdinarySingle)/(N.TimeOfConcept).*
+TimeOtherSOB->Other3 .*(RW.RWOrdinarySingle)/(N.TimeOfConcept)/(V).*
+TimeOtherSOB->Other4 .*(RW.RWOrdinarySingle)/(N.TimeOfConcept).*
+TimeOtherSOB->Other5 .*(N.TimeOfConcept)/(V)/(RW.RWNumber).*
+TimeOtherSOB->Other6 .*(N.TimeOfConcept)/(V)/(RW.RWOrdinarySingle).*
+TimeSolarTermSOB->SolarTerm .*(RW.RWOrdinarySingle)/(N.TimeSolartermOfConcept).*
+
+ObjectSOB->Academic1 .*(RW.RWOrdinarySingle)/(N.ObjectAcademic).*
+ObjectSOB->Academic2 .*(RW.RWOrdinaryMulti)/(N.ObjectAcademic).*
+ObjectSOB->Academic3 .*(N.ObjectAcademic)/(V)/(RW.RWOrdinaryMulti).*
+ObjectSOB->Academic4 .*(N.ObjectAcademic)/(V)/(RW.RWOrdinarySingle).*
+ObjectSOB->Academic5 .*(V)/(RW.RWOrdinarySingle)/(N.ObjectAcademic).*
+
+ObjectSOB->Animal1 .*(V)/(RW.RWOrdinarySingle)/(N.AnimalOfConcept).*
+ObjectSOB->AnimalSingle .*(N.AnimalOfConcept)/(V)/(RW.RWOrdinarySingle).*
+ObjectSOB->AnimalMulti .*(N.AnimalOfConcept)/(V)/(RW.RWOrdinaryMulti).*
+ObjectSOB->Animal3 .*(RW.RWOrdinarySingle)/(N.AnimalOfConcept).*
+
+ObjectSOB->Art1 .*(RW.RWOrdinarySingle)/(N.ObjectArt).*
+ObjectSOB->Art2 .*(N.ObjectArt)/(V)/(RW.RWOrdinarySingle).*
+ObjectSOB->Art3 .*(V)/(RW.RWOrdinarySingle)/(N.ObjectArt).*
+ObjectSOB->Art4 .*(V)/(RW.RWOrdinaryMulti)/(N.ObjectArt).*
+
+ObjectSOB->BodyPartSingle .*(RW.RWOrdinarySingle)/(N.ObjectBodyPart).*
+ObjectSOB->BodyPartmulti .*(RW.RWOrdinaryMulti)/(N.ObjectBodyPart).*
+
+ObjectSOB->CategorySingle .*(RW.RWOrdinarySingle)/(N.ObjectCategory).*
+ObjectSOB->CategoryMulti .*(RW.RWOrdinaryMulti)/(N.ObjectCategory).*
+
+ObjectSOB->Clothing .*(N.ObjectClothing)/(V)/(RW.RWOrdinarySingle).*
+
+ObjectSOB->Color1 .*(RW.RWOrdinarySingle)/(N.ColorOfConcept).*
+ObjectSOB->Color2 .*(RW.RWOrdinaryMulti)/(N.ColorOfConcept).*
+ObjectSOB->Color3 .*(N.ColorOfConcept)/(V)/(RW.RWOrdinarySingle).*
+
+ObjectSOB->Currency1 .*(RW.RWOrdinarySingle)/(N.ObjectCurrency).*
+ObjectSOB->Currency2 .*(N.ObjectCurrency)/(V)/(RW.RWOrdinarySingle).*
+
+ObjectSOB->Disease1 .*(RW.RWOrdinarySingle)/(N.ObjectDisease).*
+ObjectSOB->Disease2 .*(N.ObjectDisease)/(V)/(RW.RWOrdinarySingle).*
+ObjectSOB->Disease4 .*(N.ObjectDisease)/(V)/(RW.RWOrdinaryMulti).*
+ObjectSOB->Disease3 .*(V)/(RW.RWOrdinarySingle)/(N.ObjectDisease).*
+ObjectSOB->Disease5 .*(V)/(RW.RWOrdinaryMulti)/(N.ObjectDisease).*
+
+ObjectSOB->Event1 .*(RW.RWOrdinarySingle)/(N.ObjectEvent).*
+ObjectSOB->Event2 .*(N.ObjectEvent).*
+
+ObjectSOB->FoodSingle1 .*(N.ObjectFood)/(V)/(RW.RWOrdinarySingle).*
+ObjectSOB->FoodMulti1 .*(N.ObjectFood)/(V)/(RW.RWOrdinaryMulti).*
+ObjectSOB->FoodSingle2 .*(RW.RWOrdinarySingle)/(N.ObjectFood).*
+ObjectSOB->FoodMulti2 .*(RW.RWOrdinaryMulti)/(N.ObjectFood).*
+
+ObjectSOB->Instrument1 .*(RW.RWOrdinaryMulti)/(N.ObjectTrademark).*
+ObjectSOB->Instrument2 .*(RW.RWOrdinaryMulti)/(N.ObjectInstrument).*
+ObjectSOB->Instrument3 .*(RW.RWOrdinarySingle)/(N.ObjectInstrument).*
+ObjectSOB->Instrument4 .*(N.ObjectInstrument)/(V)/(RW.RWOrdinarySingle).*
+
+ObjectSOB->Language1 .*(RW.RWLocationSingle)/(N.LanguageOfConcept).*
+ObjectSOB->Language2 .*(RW.RWOrdinarySingle)/(N.LanguageOfConcept).*
+ObjectSOB->Language3 .*(RW.RWOrdinaryMulti)/(N.LanguageOfConcept).*
+ObjectSOB->Language4 .*(N.LanguageOfConcept)/(V)/(RW.RWOrdinarySingle).*
+ObjectSOB->Language5 .*(N.LanguageOfConcept)/(V)/(RW.RWOrdinaryMulti).*
+ObjectSOB->Language6 .*(V)/(RW.RWOrdinarySingle)/(N.LanguageOfConcept).*
+
+ObjectSOB->Literature1 .*(N.ObjectLiterature)/(V)/(RW.RWOrdinarySingle).*
+ObjectSOB->Literature2 .*(N.ObjectLiterature)/(V)/(RW.RWOrdinaryMulti).*
+ObjectSOB->Literature3 .*(RW.RWOrdinarySingle)/(N.ObjectLiterature).*
+ObjectSOB->Literature4 .*(RW.RWOrdinaryMulti)/(N.ObjectLiterature).*
+
+ObjectSOB->Material1 .*(N.ObjectMaterial)/(V)/(RW.RWOrdinarySingle).*
+ObjectSOB->Material2 .*(V)/(RW.RWOrdinarySingle)/(N.ObjectMaterial)/(V).*
+ObjectSOB->Material3 .*(V)/(RW.RWOrdinarySingle)/(N.ObjectMaterial).*
+ObjectSOB->Material4 .*(RW.RWOrdinarySingle)/(N.ObjectMaterial).*
+
+ObjectSOB->Offense .*(V)/(RW.RWOrdinarySingle)/(N.ObjectOffense).*
+
+ObjectSOB->PlantSingle .*(RW.RWOrdinarySingle)/(N.ObjectPlant).*
+ObjectSOB->PlantMulti .*(RW.RWOrdinaryMulti)/(N.ObjectPlant).*
+ObjectSOB->PlantMulti .*(N.ObjectPlant)/(V)/(RW.RWOrdinarySingle).*
+
+ObjectSOB->Religion1 .*(V)/(RW.RWOrdinarySingle)/(N.ObjectReligion).*
+ObjectSOB->Religion2 .*(N.ObjectReligion)/(V)/(RW.RWOrdinarySingle).*
+ObjectSOB->Religion3 .*(RW.RWOrdinarySingle)/(N.ObjectReligion).*
+ObjectSOB->Religion4 .*(RW.RWOrdinaryMulti)/(N.ObjectReligion).*
+ObjectSOB->Religion5 .*(N.ObjectReligion)/(V)/(RW.RWOrdinaryMulti).*
+
+ObjectSOB->RightSingle1 .*(V)/(RW.RWOrdinarySingle)/(N.ObjectRight).*
+ObjectSOB->RightSingle1 .*(N.ObjectRight)/(V)/(RW.RWOrdinarySingle).*
+ObjectSOB->RightMulti1 .*(V)/(RW.RWOrdinaryMulti)/(N.ObjectRight).*
+ObjectSOB->RightMulti2 .*(N.ObjectRight)/(V)/(RW.RWOrdinaryMulti).*
+
+ObjectSOB->RuleSingle1 .*(N.ObjectRule)/(V)/(RW.RWOrdinarySingle).*
+ObjectSOB->RuleSingle2 .*(RW.RWOrdinarySingle)/(N.ObjectRule).*
+ObjectSOB->RuleMulti1 .*(RW.RWOrdinaryMulti)/(N.ObjectRule).*
+ObjectSOB->RuleMulti2 .*(N.ObjectRule)/(V)/(RW.RWOrdinaryMulti).*
+
+ObjectSOB->ServiceMulti1 .*(N.ObjectService)/(V)/(RW.RWOrdinaryMulti).*
+ObjectSOB->ServiceMulti2 .*(RW.RWOrdinaryMulti)/(N.ObjectService).*
+ObjectSOB->ServiceSingle1 .*(RW.RWOrdinarySingle)/(N.ObjectService).*
+ObjectSOB->ServiceSingle2 .*(V)/(N.ObjectService)/(RW.RWOrdinaryMulti).*
+
+ObjectSOB->SportsSingle1 .*(N.ObjectSports)/(V)/(RW.RWOrdinarySingle).*
+ObjectSOB->SportsSingle2 .*(V)/(RW.RWOrdinarySingle)/(N.ObjectSports).*
+ObjectSOB->SportsSingle3 .*(RW.RWOrdinarySingle)/(N.ObjectSports).*
+
+ObjectSOB->SubstanceSingle1 .*(N.ObjectSubstance)/(V)/(RW.RWOrdinarySingle).*
+ObjectSOB->SubstanceSingle1 .*(RW.RWOrdinarySingle)/(N.ObjectSubstance).*
+
+ObjectSOB->Symbol1 .*(V)/(RW.RWOrdinarySingle)/(N.ObjectSymbol).*
+ObjectSOB->Symbol2 .*(P)/(RW.RWOrdinarySingle)/(N.ObjectSymbol).*
+
+ObjectSOB->Vocation1 .*(V)/(RW.RWDescriptive).*
+ObjectSOB->Vocation2 .*(RW.RWDescriptive)/(N.ObjectVocation).*
+ObjectSOB->Vocation3 .*(N.ObjectVocation)/(V)/(RW.RWOrdinarySingle).*
+ObjectSOB->Vocation4 .*(V)/(RW.RWOrdinarySingle)/(N.ObjectVocation).*
+
+ObjectSOB->Title1 .*(V)/(RW.RWOrdinarySingle)/(N.ObjectTitle).*
+ObjectSOB->Title2 .*(N.ObjectTitle)/(V)/(RW.RWOrdinarySingle).*
+
+ObjectSOB->OtherSingle1 .*(V)/(RW.RWOrdinarySingle)/(N.Object).*
+ObjectSOB->OtherSingle2 .*(N.Object)/(V)/(RW.RWOrdinarySingle).*
+ObjectSOB->OtherSingle3 .*(N.Object)/(P)/(RW.RWOrdinarySingle).*
+ObjectSOB->OtherMulti1 .*(V)/(RW.RWOrdinaryMulti)/(N.Object).*
+ObjectSOB->OtherMulti4 .*(P)/(RW.RWOrdinaryMulti)/(N.Object).*
+ObjectSOB->OtherMulti2 .*(N.Object)/(V)/(RW.RWOrdinaryMulti).*
+ObjectSOB->OtherMulti3 .*(RW.RWOrdinaryMulti)/(N.Object)/(V).*
