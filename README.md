@@ -1,8 +1,8 @@
-QuestionAnsweringSystem是一个Java实现的人机问答系统，能够自动分析问题并给出候选答案。IBM人工智能计算机系统"沃森"（Watson）在2011年2月美国热门的电视智力问答节目"危险边缘"（Jeopardy！）中战胜了两位人类冠军选手，QuestionAnsweringSystem就是IBM Watson的Java开源实现。
+##QuestionAnsweringSystem是一个Java实现的人机问答系统，能够自动分析问题并给出候选答案。IBM人工智能计算机系统"沃森"（Watson）在2011年2月美国热门的电视智力问答节目"危险边缘"（Jeopardy！）中战胜了两位人类冠军选手，QuestionAnsweringSystem就是IBM Watson的Java开源实现。
 
-[在线演示地址](http://121.40.143.109:8080/QuestionAnsweringSystem/)
+##[在线演示地址](http://121.40.143.109:8080/QuestionAnsweringSystem/)
 
-工作原理：
+##工作原理：
 
     1、判断问题类型（答案类型），当前使用模式匹配的方法，将来支持更多的方法，如朴素贝叶斯分类器。
     2、提取问题关键词。
@@ -11,7 +11,7 @@ QuestionAnsweringSystem是一个Java实现的人机问答系统，能够自动�
     5、结合问题以及搜索结果对候选答案进行打分。
     6、返回得分最高的TopN项候选答案。
 	
-目前支持5种问题类型（答案类型）：
+##目前支持5种问题类型（答案类型）：
 
     1、人名 
 		如：
@@ -44,7 +44,7 @@ QuestionAnsweringSystem是一个Java实现的人机问答系统，能够自动�
 		澳门是在哪一年回归祖国怀抱的？
 		邓小平在什么时候进行南巡讲话？
 		
-API接口：
+##API接口：
 
 	调用地址：
 		http://121.40.143.109:8080/QuestionAnsweringSystem/api/ask?n=1&q=APDPlat的作者是谁？
@@ -62,7 +62,7 @@ API接口：
 			}
 		]
 			
-使用说明：
+##使用说明：
 
 1、初始化MySQL数据库(MySQL作为数据缓存区使用，此步骤可选)：   
 
@@ -88,17 +88,28 @@ API接口：
 	
 [可部署war包下载](http://pan.baidu.com/s/1hq9pekc)
 
-深入了解：
+##深入了解：
 
     QuestionAnsweringSystem由2个子项目构成，deep-qa和deep-qa-web。
     deep-qa是核心部分，deep-qa-web提供web界面来和用户交互，同时也提供了Json Over HTTP的访问接口，便于异构系统的集成。
     deep-qa是一个jar包，可通过maven引用：
     
-        <dependency>
-            <groupId>org.apdplat</groupId>
-            <artifactId>deep-qa</artifactId>
-            <version>1.1</version>
-        </dependency>
+    <dependency>
+        <groupId>org.apdplat</groupId>
+        <artifactId>deep-qa</artifactId>
+        <version>1.1</version>
+    </dependency>
 
-    引入依赖后，需要将依赖deep-qa-1.1.jar包中的dic和questionTypePatterns解压出来，放到自己的类路径下。
+    示例代码如下：
+
+    Question question = SharedQuestionAnsweringSystem.getInstance().answerQuestion(questionStr);
+    if (question != null) {
+        List<CandidateAnswer> candidateAnswers = question.getAllCandidateAnswer();
+        int i=1;
+        for(CandidateAnswer candidateAnswer : candidateAnswers){
+            System.out.println((i++)+"、"+candidateAnswer.getAnswer()+":"+candidateAnswer.getScore());
+        }
+    }
+
+    运行程序后会在当前目录下生成目录deep-qa，目录里面又有两个目录dic和questionTypePatterns。
     dic是中文分词组件依赖的词库，questionTypePatterns是问题类别分析依赖的模式定义，可根据自己的需要修改。
