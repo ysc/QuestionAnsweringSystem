@@ -73,10 +73,6 @@ public class PatternBasedMultiLevelQuestionClassifier extends AbstractQuestionCl
         super.setPatternMatchResultSelector(patternMatchResultSelector);
         //读取问题类型模式
         String appPath = Tools.getAppPath(PatternBasedMultiLevelQuestionClassifier.class);
-        //统一转换到类路径下
-        if(appPath.endsWith("/lib")){
-            appPath = appPath.replace("/lib", "/classes");
-        }
         String path = appPath + "/questionTypePatterns/";
         LOG.info("模式文件目录：" + path);
         File dir = new File(path);

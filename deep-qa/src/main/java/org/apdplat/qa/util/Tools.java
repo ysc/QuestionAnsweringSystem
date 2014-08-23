@@ -459,6 +459,20 @@ public class Tools {
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
+        //统一转换到类路径下
+        if(realPath.endsWith("/lib")){
+            realPath = realPath.replace("/lib", "/classes");
+        }
+        //处理maven中的依赖JAR
+        if(realPath.contains("/org/apdplat/deep-qa/")){
+            int index = realPath.lastIndexOf("/");
+            String version = realPath.substring(index+1);
+            String jar = realPath+"/deep-qa-"+version+".jar";
+            LOG.info("maven jar："+jar);
+            ZipUtils.unZip(jar, "dic", "deep-qa/dic", true);
+            ZipUtils.unZip(jar, "questionTypePatterns", "deep-qa/questionTypePatterns", true);
+            realPath = "deep-qa";
+        }
         return realPath;
     }
 

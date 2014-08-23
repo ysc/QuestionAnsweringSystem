@@ -36,6 +36,7 @@ import org.ansj.splitWord.analysis.ToAnalysis;
 import org.ansj.util.FilterModifWord;
 import org.ansj.util.MyStaticValue;
 import org.apdplat.qa.util.Tools;
+import org.apdplat.qa.util.ZipUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -51,10 +52,6 @@ public class WordParser {
     static {
         LOG.info("开始设置默认词典路径");
         String appPath = Tools.getAppPath(WordParser.class);
-        //统一转换到类路径下
-        if(appPath.endsWith("/lib")){
-            appPath = appPath.replace("/lib", "/classes");
-        }
         String userLibrary = appPath + "/dic/default/default.dic";
         LOG.info("default.dic：" + userLibrary);
         String ambiguityLibrary = appPath + "/dic/default/ambiguity.dic";
