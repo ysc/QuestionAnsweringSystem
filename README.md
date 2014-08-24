@@ -102,6 +102,7 @@
 
     示例代码如下：
 
+    String questionStr = "APDPlat的作者是谁？";
     Question question = SharedQuestionAnsweringSystem.getInstance().answerQuestion(questionStr);
     if (question != null) {
         List<CandidateAnswer> candidateAnswers = question.getAllCandidateAnswer();
