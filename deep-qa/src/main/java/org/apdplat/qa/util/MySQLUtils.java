@@ -112,6 +112,40 @@ public class MySQLUtils {
         }
     }
 
+    public static List<Question> getHistoryQuestionsFromDatabase() {
+        List<Question> questions = new ArrayList<>();
+        String questionSql = "select question from question";
+        Connection con = getConnection();
+        if(con == null){
+            return questions;
+        }
+        PreparedStatement pst = null;
+        ResultSet rs = null;
+        try {
+            //查询问题
+            pst = con.prepareStatement(questionSql);
+            rs = pst.executeQuery();
+            while (rs.next()) {
+                String que = rs.getString(1);
+                int index = que.indexOf(":");
+                if(index > 0){
+                    que = que.substring(index+1);
+                }
+                if(que == null || "".equals(que.trim())){
+                    continue;
+                }
+                Question question = new Question();
+                question.setQuestion(que);
+                questions.add(question);
+            }
+        } catch (SQLException e) {
+            LOG.error("查询问题失败", e);
+        } finally {
+            close(con, pst, rs);
+        }
+        return questions;
+    }
+
     public static List<Question> getQuestionsFromDatabase() {
         List<Question> questions = new ArrayList<>();
         String questionSql = "select id,question from question";
