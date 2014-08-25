@@ -40,6 +40,15 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>人机问答系统演示</title>
+        <script type="text/javascript">
+            function answer(){
+                var q = document.getElementById("q").value;
+                if(q == ""){
+                    return;
+                }
+                location.href = "index.jsp?q="+q;
+            }
+        </script>
     </head>
     <body>
         <h1><font color="blue">人机问答系统演示 <a href="https://github.com/ysc/QuestionAnsweringSystem" target="_blank">项目主页</a></font></h1>
@@ -55,8 +64,8 @@
                 }
                 if (candidateAnswers != null && candidateAnswers.size() > 0) {
             %>      
-        <h1>问题：<%=questionStr%></h1>
-        <h1>答案：</h1>
+        <font color="red">问题：</font><%=questionStr%><br/>
+        <font color="red">答案：</font>
         <table>
             <tr><th>序号</th><th>候选答案</th><th>答案评分</th></tr>
                     <%
@@ -74,7 +83,7 @@
                 }
             %>        
         </table>
-        <h1><a href="<%=request.getContextPath()%>">返回</a></h1>
+        <h2><a href="index.jsp">返回主页</a></h2>
         <%
         } else {
         %>
@@ -94,15 +103,14 @@
             12、汉城是哪个国家的首都？<br/>
             13、全球表面积有多少平方公里？
         </p>
-        <form action="index.jsp" method="post">
-            <font color="red">输入问题：</font><input name="q" size="150" maxlength="150">
-            <p></p>
-            <input type="submit" value="查看答案"/>
-        </form>
+        <font color="red">输入问题：</font><input id="q" name="q" size="50" maxlength="50">
+        <p></p>
+        <h2><a href="#" onclick="answer();">查看答案</a></h2>
         <%
             }
         %>  	
+        <h2><a href="view.jsp">详细信息</a></h2>
         <br/>
-        <h1><a href="view.jsp">详细信息</a></h1>
+        <h2><a href="history_questions.jsp">其他用户曾经问过的问题</a></h2>
     </body>
 </html>
