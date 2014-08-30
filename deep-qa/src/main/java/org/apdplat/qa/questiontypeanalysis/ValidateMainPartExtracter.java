@@ -20,12 +20,12 @@
 
 package org.apdplat.qa.questiontypeanalysis;
 
-import org.apdplat.qa.questiontypeanalysis.patternbased.MainPartExtracter;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import org.apdplat.qa.questiontypeanalysis.patternbased.MainPartExtracter;
 import org.apdplat.qa.questiontypeanalysis.patternbased.QuestionStructure;
 import org.apdplat.qa.util.Tools;
 import org.slf4j.Logger;
@@ -38,7 +38,7 @@ import org.slf4j.LoggerFactory;
  */
 public class ValidateMainPartExtracter {
 
-    private static final Logger LOG = LoggerFactory.getLogger(MainPartExtracter.class);
+    private static final Logger LOG = LoggerFactory.getLogger(ValidateMainPartExtracter.class);
 
     public static List<QuestionStructure> parseQuestions(Set<String> questions) {
         LOG.info("解析预先标注的语料的主谓宾");
