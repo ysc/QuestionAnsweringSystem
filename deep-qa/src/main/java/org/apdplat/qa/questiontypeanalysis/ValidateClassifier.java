@@ -22,7 +22,6 @@ package org.apdplat.qa.questiontypeanalysis;
 
 import org.apdplat.qa.questiontypeanalysis.patternbased.PatternBasedMultiLevelQuestionClassifier;
 import org.apdplat.qa.questiontypeanalysis.patternbased.PatternMatchResultSelector;
-import org.apdplat.qa.questiontypeanalysis.patternbased.MainPartExtracter;
 import org.apdplat.qa.questiontypeanalysis.patternbased.DefaultPatternMatchResultSelector;
 import org.apdplat.qa.questiontypeanalysis.patternbased.PatternMatchStrategy;
 import org.apdplat.qa.questiontypeanalysis.patternbased.QuestionPattern;
@@ -43,7 +42,7 @@ import org.slf4j.LoggerFactory;
  */
 public class ValidateClassifier {
 
-    private static final Logger LOG = LoggerFactory.getLogger(MainPartExtracter.class);
+    private static final Logger LOG = LoggerFactory.getLogger(ValidateClassifier.class);
 
     private static PatternBasedMultiLevelQuestionClassifier questionClassifier = null;
     private static final List<String> no = new ArrayList<>();
