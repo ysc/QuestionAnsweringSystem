@@ -28,13 +28,15 @@ import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.List;
-
 import org.apdplat.qa.files.FilesConfig;
 import org.apdplat.qa.model.Evidence;
 import org.apdplat.qa.model.Question;
 import org.apdplat.qa.system.QuestionAnsweringSystem;
 import org.apdplat.qa.util.MySQLUtils;
-import org.apdplat.qa.util.NekoHTMLUtils;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -46,6 +48,13 @@ import org.slf4j.LoggerFactory;
 public class BaiduDataSource implements DataSource {
 
     private static final Logger LOG = LoggerFactory.getLogger(BaiduDataSource.class);
+
+    private static final String ACCEPT = "text/html, */*; q=0.01";
+    private static final String ENCODING = "gzip, deflate";
+    private static final String LANGUAGE = "zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3";
+    private static final String CONNECTION = "keep-alive";
+    private static final String HOST = "www.baidu.com";
+    private static final String USER_AGENT = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:31.0) Gecko/20100101 Firefox/31.0";
 
     //获取多少页
     private static final int PAGE = 1;
@@ -173,9 +182,12 @@ public class BaiduDataSource implements DataSource {
             LOG.error("url构造失败", e);
             return null;
         }
+        String referer = "http://www.baidu.com/";
         for (int i = 0; i < PAGE; i++) {
-            query = "http://www.baidu.com/s?pn=" + i * PAGESIZE + "&wd=" + query;
-            List<Evidence> evidences = NekoHTMLUtils.searchBaidu(query);
+            query = "http://www.baidu.com/s?tn=monline_5_dg&ie=utf-8&wd=" + query+"&oq="+query+"&usm=3&f=8&bs="+query+"&rsv_bp=1&rsv_sug3=1&rsv_sug4=141&rsv_sug1=1&rsv_sug=1&pn=" + i * PAGESIZE;
+            LOG.debug(query);
+            List<Evidence> evidences = searchBaidu(query, referer);
+            referer = query;
             if (evidences != null && evidences.size() > 0) {
                 question.addEvidences(evidences);
             } else {
@@ -198,6 +210,53 @@ public class BaiduDataSource implements DataSource {
             questionAnsweringSystem.answerQuestion(question);
         }
         return question;
+    }
+
+    private List<Evidence> searchBaidu(String url, String referer) {
+        List<Evidence> evidences = new ArrayList<>();
+        try {
+            Document document = Jsoup.connect(url)
+                    .header("Accept", ACCEPT)
+                    .header("Accept-Encoding", ENCODING)
+                    .header("Accept-Language", LANGUAGE)
+                    .header("Connection", CONNECTION)
+                    .header("User-Agent", USER_AGENT)
+                    .header("Host", HOST)
+                    .header("Referer", referer)
+                    .get();
+            String resultCssQuery = "html > body > div > div > div > div > div.result";
+            Elements elements = document.select(resultCssQuery);
+            for (Element element : elements) {
+                Elements subElements = element.select("h3 > a");
+                if(subElements.size() != 1){
+                    LOG.debug("没有找到标题");
+                    continue;
+                }
+                String title =subElements.get(0).text();
+                if (title == null || "".equals(title.trim())) {
+                    LOG.debug("标题为空");
+                    continue;
+                }
+                subElements = element.select("div.c-abstract");
+                if(subElements.size() != 1){
+                    LOG.debug("没有找到摘要");
+                    continue;
+                }
+                String snippet =subElements.get(0).text();
+                if (snippet == null || "".equals(snippet.trim())) {
+                    LOG.debug("摘要为空");
+                    continue;
+                }
+                Evidence evidence = new Evidence();
+                evidence.setTitle(title);
+                evidence.setSnippet(snippet);
+                
+                evidences.add(evidence);
+            }
+        } catch (Exception ex) {
+            LOG.error("搜索出错", ex);
+        }
+        return evidences;
     }
 
     public static void main(String args[]) {

@@ -128,7 +128,6 @@
         <httpclient.version>3.1</httpclient.version>
         <ansj.version>0.9</ansj.version>
         <json.version>chargebee-1.0</json.version>
-        <nekohtml.version>1.9.19</nekohtml.version>
         <stanford-parser.version>3.3.1</stanford-parser.version>
         <jcl-over-slf4j.version>1.6.4</jcl-over-slf4j.version>
         <jackson.version>1.9.13</jackson.version>
@@ -188,11 +187,6 @@
             <groupId>org.json</groupId>
             <artifactId>org.json</artifactId>
             <version>${json.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>net.sourceforge.nekohtml</groupId>
-            <artifactId>nekohtml</artifactId>
-            <version>${nekohtml.version}</version>
         </dependency>
         <dependency>
             <groupId>edu.stanford.nlp</groupId>
