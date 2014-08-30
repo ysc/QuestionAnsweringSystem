@@ -146,6 +146,9 @@ public class MainPartExtracter {
         questionStructure.setTree(tree);
 
         GrammaticalStructure gs = gsf.newGrammaticalStructure(tree);
+        if(gs == null){
+            return null;
+        }
         //获取依存关系
         Collection<TypedDependency> tdls = gs.typedDependenciesCCprocessed(true);
         questionStructure.setTdls(tdls);
