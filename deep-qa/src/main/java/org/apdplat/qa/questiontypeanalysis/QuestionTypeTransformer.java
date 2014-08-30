@@ -49,12 +49,15 @@ public class QuestionTypeTransformer {
         if (questionType.contains("Time")) {
             return QuestionType.TIME;
         }
+        /**
+         * 下面两种问题类型目前还不能回答
         if (questionType.contains("Object")) {
             return QuestionType.OBJECT;
         }
         if (questionType.contains("Definition")) {
             return QuestionType.DEFINITIION;
         }
+        */
         LOG.error("问题类型转换失败，默认人名：" + questionType);
         return QuestionType.PERSON_NAME;
     }
