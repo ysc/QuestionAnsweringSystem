@@ -333,8 +333,11 @@ public class PatternBasedMultiLevelQuestionClassifier extends AbstractQuestionCl
             String mainPart = questionPatternCache.get(question + "mainPart");
             if (mainPart == null) {
                 //提取主谓宾及词性以便和模式进行匹配
-                mainPart = mainPartExtracter.getMainPart(question).getMainPart();
-                questionPatternCache.put(question + "mainPart", mainPart);
+                QuestionStructure questionStructure = mainPartExtracter.getMainPart(question);
+                if(questionStructure != null){
+                    mainPart = questionStructure.getMainPart();
+                    questionPatternCache.put(question + "mainPart", mainPart);
+                }
             }
             if (mainPart != null) {
                 if (patternMatchStrategy.enableQuestionPattern(QuestionPattern.MainPartPattern)) {
