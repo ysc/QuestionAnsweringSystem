@@ -224,8 +224,7 @@ public class GoogleDataSource implements DataSource {
         try {
             HttpClient httpClient = new HttpClient();
             GetMethod getMethod = new GetMethod(query);
-
-            httpClient.executeMethod(getMethod);
+            
             getMethod.getParams().setParameter(HttpMethodParams.RETRY_HANDLER,
                     new DefaultHttpMethodRetryHandler());
 
