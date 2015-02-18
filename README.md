@@ -1,7 +1,5 @@
 ##QuestionAnsweringSystem是一个Java实现的人机问答系统，能够自动分析问题并给出候选答案。IBM人工智能计算机系统"沃森"（Watson）在2011年2月美国热门的电视智力问答节目"危险边缘"（Jeopardy！）中战胜了两位人类冠军选手，QuestionAnsweringSystem就是IBM Watson的Java开源实现。
 
-##[在线演示地址](http://121.40.143.109)
-
 ##工作原理：
 
     1、判断问题类型（答案类型），当前使用模式匹配的方法，将来支持更多的方法，如朴素贝叶斯分类器。
@@ -47,7 +45,7 @@
 ##API接口：
 
 	调用地址：
-		http://121.40.143.109/api/ask?n=1&q=APDPlat的作者是谁？
+		http://127.0.0.1/api/ask?n=1&q=APDPlat的作者是谁？
 	参数：
 		n表示需要返回的答案的个数
 		q表示问题
