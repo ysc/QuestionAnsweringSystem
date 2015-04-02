@@ -86,6 +86,55 @@
 	
 [可部署war包下载](http://pan.baidu.com/s/1hq9pekc)
 
+##如何在你的应用中集成人机问答系统QuestionAnsweringSystem? 
+
+    QuestionAnsweringSystem提供了两种集成方式，以库的方式嵌入到应用中，以平台的方式独立部署。
+
+    下面说说这两种方式如何做。
+
+    1、以库的方式嵌入到应用中。
+
+    这种方式只支持Java平台，可通过Maven依赖将库加入构建路径，如下所示：
+
+    <dependency>
+        <groupId>org.apdplat</groupId>
+        <artifactId>deep-qa</artifactId>
+        <version>1.1</version>
+    </dependency>
+
+    在应用如何使用呢？示例代码如下：
+    
+    String questionStr = "APDPlat的作者是谁？";
+    Question question = SharedQuestionAnsweringSystem.getInstance().answerQuestion(questionStr);
+    if (question != null) {
+        List<CandidateAnswer> candidateAnswers = question.getAllCandidateAnswer();
+        int i=1;
+        for(CandidateAnswer candidateAnswer : candidateAnswers){
+            System.out.println((i++)+"、"+candidateAnswer.getAnswer()+":"+candidateAnswer.getScore());
+        }
+    }
+
+    运行程序后会在当前目录下生成目录deep-qa，目录里面又有两个目录dic和questionTypePatterns。dic是中文分词组件依赖的词库，questionTypePatterns是问题类别分析依赖的模式定义，可根据自己的需要修改。
+
+    2、以平台的方式独立部署。
+
+    首先在自己的服务器上如192.168.0.1部署好了，然后就可以通过Json Over HTTP的方式提供服务，使用方法如下所示：
+
+    调用地址：
+    http://192.168.0.1/api/ask?n=1&q=APDPlat的作者是谁？
+    参数：
+    n表示需要返回的答案的个数
+    q表示问题
+    编码：
+    UTF-8编码
+    返回json:
+    [
+        {
+            "answer": "杨尚川",
+            "score": 1
+        }
+    ]
+
 ##深入了解：
 
     QuestionAnsweringSystem由2个子项目构成，deep-qa和deep-qa-web。
