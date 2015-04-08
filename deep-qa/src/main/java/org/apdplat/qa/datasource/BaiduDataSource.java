@@ -224,7 +224,7 @@ public class BaiduDataSource implements DataSource {
                     .header("Host", HOST)
                     .header("Referer", referer)
                     .get();
-            String resultCssQuery = "html > body > div > div > div > div > div.result";
+            String resultCssQuery = "html > body > div > div > div > div > div";
             Elements elements = document.select(resultCssQuery);
             for (Element element : elements) {
                 Elements subElements = element.select("h3 > a");
