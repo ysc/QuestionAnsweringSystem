@@ -25,13 +25,13 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import org.ansj.domain.Term;
 import org.apdplat.qa.model.CandidateAnswer;
 import org.apdplat.qa.model.CandidateAnswerCollection;
 import org.apdplat.qa.model.Evidence;
 import org.apdplat.qa.model.Question;
 import org.apdplat.qa.system.ScoreWeight;
 import org.apdplat.qa.util.Tools;
+import org.apdplat.word.segmentation.Word;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -51,7 +51,7 @@ public class TextualAlignmentCandidateAnswerScore implements CandidateAnswerScor
     }
 
     protected List<String> getQuestionTerms(Question question) {
-        return question.getTerms();
+        return question.getWords();
     }
 
     @Override
@@ -82,13 +82,13 @@ public class TextualAlignmentCandidateAnswerScore implements CandidateAnswerScor
                     continue;
                 }
                 //4、演化为多个模式，支持模糊匹配
-                List<Term> textualAlignmentPatternTerms = Tools.getTerms(textualAlignmentPattern);
-                List<String> patterns = new ArrayList<String>();
+                List<Word> textualAlignmentPatternTerms = Tools.getWords(textualAlignmentPattern);
+                List<String> patterns = new ArrayList<>();
                 patterns.add(textualAlignmentPattern);
                 StringBuilder str = new StringBuilder();
                 int len = textualAlignmentPatternTerms.size();
                 for (int t = 0; t < len; t++) {
-                    str.append(textualAlignmentPatternTerms.get(t).getName());
+                    str.append(textualAlignmentPatternTerms.get(t).getText());
                     if (t < len - 1) {
                         str.append(".{0,5}");
                     }
