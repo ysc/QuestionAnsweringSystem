@@ -22,9 +22,8 @@ package org.apdplat.qa.model;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import org.ansj.domain.Term;
 import org.apdplat.qa.parser.WordParser;
+import org.apdplat.word.segmentation.Word;
 
 /**
  * 证据由title和snippet组成 对于同一个问题来说，不同的证据的重要性是不一样的，所以证据有分值 证据有多个候选答案
@@ -38,20 +37,20 @@ public class Evidence {
     private double score = 1.0;
     private CandidateAnswerCollection candidateAnswerCollection;
 
-    public List<String> getTitleTerms() {
+    public List<String> getTitleWords() {
         List<String> result = new ArrayList<>();
-        List<Term> terms = WordParser.parse(title);
-        for (Term term : terms) {
-            result.add(term.getName());
+        List<Word> words = WordParser.parse(title);
+        for (Word word : words) {
+            result.add(word.getText());
         }
         return result;
     }
 
-    public List<String> getSnippetTerms() {
+    public List<String> getSnippetWords() {
         List<String> result = new ArrayList<>();
-        List<Term> terms = WordParser.parse(snippet);
-        for (Term term : terms) {
-            result.add(term.getName());
+        List<Word> words = WordParser.parse(snippet);
+        for (Word word : words) {
+            result.add(word.getText());
         }
         return result;
     }
@@ -61,11 +60,11 @@ public class Evidence {
      *
      * @return 分词结果
      */
-    public List<String> getTerms() {
+    public List<String> getWords() {
         List<String> result = new ArrayList<>();
-        List<Term> terms = WordParser.parse(title + snippet);
-        for (Term term : terms) {
-            result.add(term.getName());
+        List<Word> words = WordParser.parse(title + snippet);
+        for (Word word : words) {
+            result.add(word.getText());
         }
         return result;
     }
