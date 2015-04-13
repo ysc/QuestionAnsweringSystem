@@ -20,6 +20,8 @@
 
 package org.apdplat.qa.parser;
 
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.List;
 
 import org.apdplat.qa.util.Tools;
@@ -41,9 +43,16 @@ public class WordParser {
 
     static {
         String appPath = Tools.getAppPath(WordParser.class);
-        String confFile = appPath + "/dic/word_v_1_3/word.local.conf";
-        LOG.info("word分词的自定义配置文件："+confFile);
-        WordConfTools.forceOverride(confFile);
+        String confFile = appPath + "/web/dic/word_v_1_3/word.local.conf";
+        if(!Files.exists(Paths.get(confFile))){
+            confFile = appPath + "/jar/dic/word_v_1_3/word.local.conf";
+        }
+        if(Files.exists(Paths.get(confFile))){
+            LOG.info("word分词的自定义配置文件："+confFile);
+            WordConfTools.forceOverride(confFile);
+        }else{
+            LOG.info("不存在word分词的自定义配置文件："+confFile);
+        }
     }
 
     /**
