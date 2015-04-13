@@ -4,7 +4,7 @@
 
     <groupId>org.apdplat</groupId>
     <artifactId>deep-qa-web</artifactId>
-    <version>1.1</version>
+    <version>1.2</version>
     <packaging>war</packaging>
 
     <name>deep-qa-web</name>
@@ -116,7 +116,7 @@
         <maven-jetty-plugin.version>6.1.26</maven-jetty-plugin.version>
         <sonar-maven3-plugin.version>3.5</sonar-maven3-plugin.version>
         
-        <deep.qa.version>1.1</deep.qa.version>
+        <deep.qa.version>1.2</deep.qa.version>
         <javaee-web-api.version>6.0</javaee-web-api.version>
         <junit.version>3.8.1</junit.version>
     </properties>
