@@ -44,7 +44,6 @@ import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import org.ansj.domain.Term;
 import org.apache.commons.httpclient.DefaultHttpMethodRetryHandler;
 import org.apache.commons.httpclient.HostConfiguration;
 import org.apache.commons.httpclient.HttpClient;
@@ -56,6 +55,7 @@ import org.apdplat.qa.datasource.FileDataSource;
 import org.apdplat.qa.model.Evidence;
 import org.apdplat.qa.model.Question;
 import org.apdplat.qa.parser.WordParser;
+import org.apdplat.word.segmentation.Word;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.slf4j.Logger;
@@ -154,9 +154,9 @@ public class Tools {
             List<Evidence> evidences = question.getEvidences();
             for (Evidence evidence : evidences) {
                 Set<String> set = new HashSet<>();
-                List<Term> terms = WordParser.parse(evidence.getTitle() + evidence.getSnippet());
-                for (Term term : terms) {
-                    set.add(term.getName());
+                List<Word> words = WordParser.parse(evidence.getTitle() + evidence.getSnippet());
+                for (Word word : words) {
+                    set.add(word.getText());
                 }
                 for (String item : set) {
                     Integer doc = map.get(item);
@@ -199,11 +199,11 @@ public class Tools {
      * @param text
      * @return
      */
-    public static List<Term> getTerms(String text) {
-        List<Term> result = new ArrayList<>();
-        List<Term> terms = WordParser.parse(text);
-        for (Term term : terms) {
-            result.add(term);
+    public static List<Word> getWords(String text) {
+        List<Word> result = new ArrayList<>();
+        List<Word> words = WordParser.parse(text);
+        for (Word word : words) {
+            result.add(word);
         }
         return result;
     }
