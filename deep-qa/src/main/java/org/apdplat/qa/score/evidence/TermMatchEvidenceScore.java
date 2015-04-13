@@ -50,11 +50,11 @@ public class TermMatchEvidenceScore implements EvidenceScore {
         LOG.debug("*************************");
         LOG.debug("Evidence TermMatch评分开始");
         //1、对问题进行分词
-        List<String> questionTerms = question.getTerms();
+        List<String> questionTerms = question.getWords();
         LOG.debug("questionTerms:" + questionTerms);
         //2、对证据进行分词
-        List<String> titleTerms = evidence.getTitleTerms();
-        List<String> snippetTerms = evidence.getSnippetTerms();
+        List<String> titleTerms = evidence.getTitleWords();
+        List<String> snippetTerms = evidence.getSnippetWords();
         LOG.debug("titleTerms:" + titleTerms);
         LOG.debug("snippetTerms:" + snippetTerms);
 		//3、不管语法关系或词序，直接对问题和证据的词进行匹配
