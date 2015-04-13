@@ -28,11 +28,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import org.ansj.domain.Term;
 import org.apdplat.qa.filter.CandidateAnswerCanNotInQustionFilter;
 import org.apdplat.qa.filter.CandidateAnswerFilter;
 import org.apdplat.qa.parser.WordParser;
 import org.apdplat.qa.util.Tools;
+import org.apdplat.word.segmentation.Word;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -71,24 +71,24 @@ public class Question {
     }
 
     public Map.Entry<String, Integer> getHot() {
-        List<String> questionTerms = getTerms();
+        List<String> questionWords = getWords();
         Map<String, Integer> map = new HashMap<>();
-        List<Term> terms = WordParser.parse(getText());
-        for (Term term : terms) {
-            Integer count = map.get(term.getName());
+        List<Word> words = WordParser.parse(getText());
+        for (Word word : words) {
+            Integer count = map.get(word.getText());
             if (count == null) {
                 count = 1;
             } else {
                 count++;
             }
-            map.put(term.getName(), count);
+            map.put(word.getText(), count);
         }
         Map<String, Integer> questionMap = new HashMap<>();
-        for (String questionTerm : questionTerms) {
-            Integer count = map.get(questionTerm);
-            if (questionTerm.length() > 1 && count != null) {
-                questionMap.put(questionTerm, count);
-                LOG.debug("问题热词统计: " + questionTerm + " " + map.get(questionTerm));
+        for (String questionWord : questionWords) {
+            Integer count = map.get(questionWord);
+            if (questionWord.length() > 1 && count != null) {
+                questionMap.put(questionWord, count);
+                LOG.debug("问题热词统计: " + questionWord + " " + map.get(questionWord));
             }
         }
         List<Map.Entry<String, Integer>> list = Tools.sortByIntegerValue(questionMap);
@@ -120,11 +120,11 @@ public class Question {
      *
      * @return 分词结果
      */
-    public List<String> getTerms() {
+    public List<String> getWords() {
         List<String> result = new ArrayList<>();
-        List<Term> terms = WordParser.parse(question.replace("?", "").replace("？", ""));
-        for (Term term : terms) {
-            result.add(term.getName());
+        List<Word> words = WordParser.parse(question.replace("?", "").replace("？", ""));
+        for (Word word : words) {
+            result.add(word.getText());
         }
         return result;
     }
