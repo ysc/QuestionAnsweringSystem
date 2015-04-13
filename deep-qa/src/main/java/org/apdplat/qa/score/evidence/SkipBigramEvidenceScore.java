@@ -50,7 +50,7 @@ public class SkipBigramEvidenceScore implements EvidenceScore {
         LOG.debug("*************************");
         LOG.debug("Evidence 跳跃二元模型评分开始");
         //1、对问题进行分词
-        List<String> questionTerms = question.getTerms();
+        List<String> questionTerms = question.getWords();
         //2、利用跳跃二元模型构造出问题的所有跳跃二元表达式
         List<String> patterns = new ArrayList<>();
         for (int i = 0; i < questionTerms.size() - 2; i++) {
