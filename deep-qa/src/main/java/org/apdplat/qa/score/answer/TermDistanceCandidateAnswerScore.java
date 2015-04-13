@@ -23,13 +23,13 @@ package org.apdplat.qa.score.answer;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.ansj.domain.Term;
 import org.apdplat.qa.model.CandidateAnswer;
 import org.apdplat.qa.model.CandidateAnswerCollection;
 import org.apdplat.qa.model.Evidence;
 import org.apdplat.qa.model.Question;
 import org.apdplat.qa.system.ScoreWeight;
 import org.apdplat.qa.util.Tools;
+import org.apdplat.word.segmentation.Word;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -53,26 +53,28 @@ public class TermDistanceCandidateAnswerScore implements CandidateAnswerScore {
         LOG.debug("*************************");
         LOG.debug("词距评分开始");
         //1、对问题进行分词
-        List<String> questionTerms = question.getTerms();
+        List<String> questionTerms = question.getWords();
         //2、对证据进行分词
-        List<Term> terms = Tools.getTerms(evidence.getTitle() + "," + evidence.getSnippet());
+        List<Word> evidenceWords = Tools.getWords(evidence.getTitle() + "," + evidence.getSnippet());
         for (CandidateAnswer candidateAnswer : candidateAnswerCollection.getAllCandidateAnswer()) {
             //3、计算候选答案的词距
             int distance = 0;
             LOG.debug("计算候选答案 " + candidateAnswer.getAnswer() + " 的词距");
             //3.1 计算candidateAnswer的分布
             List<Integer> candidateAnswerOffes = new ArrayList<>();
-            for (Term term : terms) {
-                if (term.getName().equals(candidateAnswer.getAnswer())) {
-                    candidateAnswerOffes.add(term.getOffe());
+            for (int i=0; i<evidenceWords.size(); i++) {
+                Word evidenceWord = evidenceWords.get(i);
+                if (evidenceWord.getText().equals(candidateAnswer.getAnswer())) {
+                    candidateAnswerOffes.add(i);
                 }
             }
             for (String questionTerm : questionTerms) {
                 //3.2 计算questionTerm的分布
                 List<Integer> questionTermOffes = new ArrayList<>();
-                for (Term term : terms) {
-                    if (term.getName().equals(questionTerm)) {
-                        questionTermOffes.add(term.getOffe());
+                for (int i=0; i<evidenceWords.size(); i++) {
+                    Word evidenceWord = evidenceWords.get(i);
+                    if (evidenceWord.getText().equals(questionTerm)) {
+                        questionTermOffes.add(i);
                     }
                 }
                 //3.3 计算candidateAnswer和questionTerm的词距
