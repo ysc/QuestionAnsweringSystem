@@ -64,7 +64,7 @@ public enum QuestionType {
     private QuestionType(String des){
         this.des = des;
     }
-    private String des;
+    private final String des;
 
     public String getDes() {
         return des;
