@@ -22,6 +22,7 @@
 <%@page import="org.apdplat.qa.model.CandidateAnswer"%>
 <%@page import="org.apdplat.qa.model.QuestionType"%>
 <%@page import="org.apdplat.qa.SharedQuestionAnsweringSystem"%>
+<%@page import="org.apdplat.qa.parser.WordParser"%>
 <%@page import="java.util.List"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <%
@@ -52,6 +53,7 @@
     </head>
     <body>
         <h1><font color="blue">人机问答系统演示 <a href="https://github.com/ysc/QuestionAnsweringSystem" target="_blank">项目主页</a></font></h1>
+        <h2><a href="index.jsp">忽略细节</a></h2>
                 <%
                     if (questionStr == null || questionStr.trim().length() <= 3) {
                 %>      
@@ -64,13 +66,15 @@
                 }
                 if (question != null) {
             %>
-        <font color="red">Question : <%=question.getQuestion()%></font><br/><br/>
+        <font color="red">Question : <%=question.getQuestion()%> 问题类型：<%=question.getQuestionType().getDes()%>/<%=question.getQuestionType().getPos()%></font><br/><br/>
             <%
                 int j = 1;
                 for (Evidence evidence : question.getEvidences()) {
             %>
         <font color="red"> Title <%=j%> : </font> <%=evidence.getTitle()%><br/>
+        <font color="red"> Title Words <%=j%> : </font> <%=WordParser.parse(evidence.getTitle())%><br/>
         <font color="red"> Snippet <%=j%> : </font> <%=evidence.getSnippet()%><br/>
+        <font color="red"> Snippet Words <%=j%> : </font> <%=WordParser.parse(evidence.getSnippet())%><br/>
             <%
                     j++;
                 }
@@ -97,25 +101,24 @@
         <%
             }
         %>
-        <h2><a href="<%=request.getContextPath()%>/view.jsp">返回主页</a></h2>
         <%
         } else {
         %>
         <p>
             <b>可以像如下提问：</b><br/>
-            1、APDPlat的作者是谁？<br/>
-            2、APDPlat的发起人是谁？<br/>
-            3、谁死后布了七十二疑冢？<br/>
-            4、谁是资深Nutch搜索引擎专家？<br/>
-            5、BMW是哪个汽车公司制造的？<br/>
-            6、长城信用卡是哪家银行发行的？<br/>
-            7、美国历史上第一所高等学府是哪个学校？<br/>
-            8、前身是红色中华通讯社的是什么？<br/>
-            9、“海的女儿”是哪个城市的城徽？<br/>
-            10、世界上流经国家最多的河流是哪一条？<br/>
-            11、世界上最长的河流是什么？<br/>
-            12、汉城是哪个国家的首都？<br/>
-            13、全球表面积有多少平方公里？
+            1、<a href="view.jsp?q=APDPlat的作者是谁？">APDPlat的作者是谁？</a><br/>
+            2、<a href="view.jsp?q=APDPlat的发起人是谁？">APDPlat的发起人是谁？</a><br/>
+            3、<a href="view.jsp?q=谁死后布了七十二疑冢？">谁死后布了七十二疑冢？</a><br/>
+            4、<a href="view.jsp?q=谁是资深Nutch搜索引擎专家？">谁是资深Nutch搜索引擎专家？</a><br/>
+            5、<a href="view.jsp?q=BMW是哪个汽车公司制造的？">BMW是哪个汽车公司制造的？</a><br/>
+            6、<a href="view.jsp?q=长城信用卡是哪家银行发行的？">长城信用卡是哪家银行发行的？</a><br/>
+            7、<a href="view.jsp?q=美国历史上第一所高等学府是哪个学校？">美国历史上第一所高等学府是哪个学校？</a><br/>
+            8、<a href="view.jsp?q=前身是红色中华通讯社的是什么？">前身是红色中华通讯社的是什么？</a><br/>
+            9、<a href="view.jsp?q=“海的女儿”是哪个城市的城徽？">“海的女儿”是哪个城市的城徽？</a><br/>
+            10、<a href="view.jsp?q=世界上流经国家最多的河流是哪一条？">世界上流经国家最多的河流是哪一条？</a><br/>
+            11、<a href="view.jsp?q=世界上最长的河流是什么？">世界上最长的河流是什么？</a><br/>
+            12、<a href="view.jsp?q=汉城是哪个国家的首都？">汉城是哪个国家的首都？</a><br/>
+            13、<a href="view.jsp?q=全球表面积有多少平方公里？">全球表面积有多少平方公里？</a>
         </p>
         <font color="red">输入问题：</font><input id="q" name="q" size="50" maxlength="50">
         <p></p>
@@ -123,8 +126,8 @@
         <%
             }
         %>  	
-        <h2><a href="index.jsp">简要信息</a></h2>
         <br/>
+        <h2><a href="<%=request.getContextPath()%>/view.jsp">返回主页</a></h2>
         <h2><a href="history_questions.jsp">其他用户曾经问过的问题</a></h2>
     </body>
 </html>
