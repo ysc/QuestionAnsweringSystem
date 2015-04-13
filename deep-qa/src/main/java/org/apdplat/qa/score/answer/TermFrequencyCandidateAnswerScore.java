@@ -85,14 +85,14 @@ public class TermFrequencyCandidateAnswerScore implements CandidateAnswerScore {
         //处理title
         List<Word> words = WordParser.parse(title);
         for (Word word : words) {
-            if (word.getPartOfSpeech().getPos().startsWith(question.getQuestionType().getNature())) {
+            if (word.getPartOfSpeech().getPos().startsWith(question.getQuestionType().getPos())) {
                 titleNames.add(word.getText());
             }
         }
         //处理snippet
         words = WordParser.parse(snippet);
         for (Word word : words) {
-            if (word.getPartOfSpeech().getPos().startsWith(question.getQuestionType().getNature())) {
+            if (word.getPartOfSpeech().getPos().startsWith(question.getQuestionType().getPos())) {
                 snippetNames.add(word.getText());
             }
         }

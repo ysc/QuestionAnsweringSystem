@@ -52,7 +52,7 @@ public class CommonCandidateAnswerSelect implements CandidateAnswerSelect {
         for (Word word : words) {
             if (word.getText().length() > 1 &&
                     (word.getPartOfSpeech()==PartOfSpeech.I 
-                    || word.getPartOfSpeech().getPos().startsWith(question.getQuestionType().getNature()))) {
+                    || word.getPartOfSpeech().getPos().startsWith(question.getQuestionType().getPos()))) {
                 CandidateAnswer answer = new CandidateAnswer();
                 answer.setAnswer(word.getText());
                 candidateAnswerCollection.addAnswer(answer);
