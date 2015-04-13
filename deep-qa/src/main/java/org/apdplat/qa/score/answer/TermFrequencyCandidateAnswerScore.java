@@ -25,13 +25,13 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.ansj.domain.Term;
 import org.apdplat.qa.model.CandidateAnswer;
 import org.apdplat.qa.model.CandidateAnswerCollection;
 import org.apdplat.qa.model.Evidence;
 import org.apdplat.qa.model.Question;
 import org.apdplat.qa.parser.WordParser;
 import org.apdplat.qa.system.ScoreWeight;
+import org.apdplat.word.segmentation.Word;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -83,17 +83,17 @@ public class TermFrequencyCandidateAnswerScore implements CandidateAnswerScore {
         List<String> snippetNames = new ArrayList<>();
 
         //处理title
-        List<Term> terms = WordParser.parse(title);
-        for (Term term : terms) {
-            if (term.getNatrue().natureStr.startsWith(question.getQuestionType().getNature())) {
-                titleNames.add(term.getName());
+        List<Word> words = WordParser.parse(title);
+        for (Word word : words) {
+            if (word.getPartOfSpeech().getPos().startsWith(question.getQuestionType().getNature())) {
+                titleNames.add(word.getText());
             }
         }
         //处理snippet
-        terms = WordParser.parse(snippet);
-        for (Term term : terms) {
-            if (term.getNatrue().natureStr.startsWith(question.getQuestionType().getNature())) {
-                snippetNames.add(term.getName());
+        words = WordParser.parse(snippet);
+        for (Word word : words) {
+            if (word.getPartOfSpeech().getPos().startsWith(question.getQuestionType().getNature())) {
+                snippetNames.add(word.getText());
             }
         }
 	    //统计词频
