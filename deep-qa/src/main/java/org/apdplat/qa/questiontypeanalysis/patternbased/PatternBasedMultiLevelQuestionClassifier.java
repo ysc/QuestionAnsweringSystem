@@ -36,12 +36,12 @@ import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import org.ansj.domain.Term;
 import org.apdplat.qa.model.Question;
 import org.apdplat.qa.parser.WordParser;
 import org.apdplat.qa.questiontypeanalysis.AbstractQuestionClassifier;
 import org.apdplat.qa.questiontypeanalysis.QuestionClassifier;
 import org.apdplat.qa.util.Tools;
+import org.apdplat.word.segmentation.Word;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -298,7 +298,7 @@ public class PatternBasedMultiLevelQuestionClassifier extends AbstractQuestionCl
 
             if (termWithNature == null || nature == null) {
                 //提取问题词性以便和模式进行匹配
-                List<Term> terms = WordParser.parse(question);
+                List<Word> words = WordParser.parse(question);
                 //APDPlat的发起人是谁？
                 //apdplat/en 的/uj 发起人/n 是/v 谁/RW.RWPersonSingle ？/w 
                 StringBuilder termWithNatureStrs = new StringBuilder();
@@ -306,12 +306,12 @@ public class PatternBasedMultiLevelQuestionClassifier extends AbstractQuestionCl
                 //en/uj/n/v/RW.RWPersonSingle/w		
                 StringBuilder natureStrs = new StringBuilder();
                 int i = 0;
-                for (Term term : terms) {
-                    termWithNatureStrs.append(term.getName()).append("/").append(term.getNatrue().natureStr.trim()).append(" ");
+                for (Word word : words) {
+                    termWithNatureStrs.append(word.getText()).append("/").append(word.getPartOfSpeech().getPos()).append(" ");
                     if ((i++) > 0) {
                         natureStrs.append("/");
                     }
-                    natureStrs.append(term.getNatrue().natureStr.trim());
+                    natureStrs.append(word.getPartOfSpeech().getPos());
                 }
                 termWithNature = termWithNatureStrs.toString();
                 nature = natureStrs.toString();
