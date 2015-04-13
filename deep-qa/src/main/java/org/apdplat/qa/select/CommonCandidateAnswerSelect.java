@@ -22,7 +22,6 @@ package org.apdplat.qa.select;
 
 import java.util.List;
 
-import org.ansj.domain.Term;
 import org.apdplat.qa.datasource.DataSource;
 import org.apdplat.qa.datasource.FileDataSource;
 import org.apdplat.qa.files.FilesConfig;
@@ -31,6 +30,8 @@ import org.apdplat.qa.model.CandidateAnswerCollection;
 import org.apdplat.qa.model.Evidence;
 import org.apdplat.qa.model.Question;
 import org.apdplat.qa.parser.WordParser;
+import org.apdplat.word.segmentation.PartOfSpeech;
+import org.apdplat.word.segmentation.Word;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -47,11 +48,13 @@ public class CommonCandidateAnswerSelect implements CandidateAnswerSelect {
     public void select(Question question, Evidence evidence) {
         CandidateAnswerCollection candidateAnswerCollection = new CandidateAnswerCollection();
 
-        List<Term> terms = WordParser.parse(evidence.getTitle() + evidence.getSnippet());
-        for (Term term : terms) {
-            if (term.getNatrue().natureStr.startsWith(question.getQuestionType().getNature()) && term.getName().length() > 1) {
+        List<Word> words = WordParser.parse(evidence.getTitle() + evidence.getSnippet());
+        for (Word word : words) {
+            if (word.getText().length() > 1 &&
+                    (word.getPartOfSpeech()==PartOfSpeech.I 
+                    || word.getPartOfSpeech().getPos().startsWith(question.getQuestionType().getNature()))) {
                 CandidateAnswer answer = new CandidateAnswer();
-                answer.setAnswer(term.getName());
+                answer.setAnswer(word.getText());
                 candidateAnswerCollection.addAnswer(answer);
             }
         }
