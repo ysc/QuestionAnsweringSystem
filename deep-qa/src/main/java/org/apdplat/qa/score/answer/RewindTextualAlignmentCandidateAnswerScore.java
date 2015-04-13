@@ -25,13 +25,13 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import org.ansj.domain.Term;
 import org.apdplat.qa.model.CandidateAnswer;
 import org.apdplat.qa.model.CandidateAnswerCollection;
 import org.apdplat.qa.model.Evidence;
 import org.apdplat.qa.model.Question;
 import org.apdplat.qa.system.ScoreWeight;
 import org.apdplat.qa.util.Tools;
+import org.apdplat.word.segmentation.Word;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -55,7 +55,7 @@ public class RewindTextualAlignmentCandidateAnswerScore implements CandidateAnsw
         LOG.debug("*************************");
         LOG.debug("回带文本对齐评分开始");
         //1、对问题进行分词
-        List<String> questionTerms = question.getTerms();
+        List<String> questionTerms = question.getWords();
         int questionTermsSize = questionTerms.size();
         //将每一个候选答案都放到问题的每一个位置，查找在证据中是否有匹配文本
         for (CandidateAnswer candidateAnswer : candidateAnswerCollection.getAllCandidateAnswer()) {
@@ -82,13 +82,13 @@ public class RewindTextualAlignmentCandidateAnswerScore implements CandidateAnsw
                     continue;
                 }
                 //4、演化为多个模式，支持模糊匹配
-                List<Term> textualAlignmentPatternTerms = Tools.getTerms(textualAlignmentPattern);
+                List<Word> textualAlignmentPatternTerms = Tools.getWords(textualAlignmentPattern);
                 List<String> patterns = new ArrayList<>();
                 patterns.add(textualAlignmentPattern);
                 StringBuilder str = new StringBuilder();
                 int len = textualAlignmentPatternTerms.size();
                 for (int t = 0; t < len; t++) {
-                    str.append(textualAlignmentPatternTerms.get(t).getName());
+                    str.append(textualAlignmentPatternTerms.get(t).getText());
                     if (t < len - 1) {
                         str.append(".{0,5}");
                     }
