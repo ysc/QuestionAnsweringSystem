@@ -199,7 +199,7 @@ public class QuestionAnsweringSystemImpl implements QuestionAnsweringSystem {
                 LOG.debug("Title:" + evidence.getTitle());
                 LOG.debug("Snippet:" + evidence.getSnippet());
                 LOG.debug("Score:" + evidence.getScore());
-                LOG.debug("Terms:" + evidence.getTerms());
+                LOG.debug("Words:" + evidence.getWords());
                 //提取候选答案
                 //候选答案存储在evidence对象里面
                 candidateAnswerSelect.select(question, evidence);
