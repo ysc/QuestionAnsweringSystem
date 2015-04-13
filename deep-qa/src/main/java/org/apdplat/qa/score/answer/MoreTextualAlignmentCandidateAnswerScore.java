@@ -52,7 +52,7 @@ public class MoreTextualAlignmentCandidateAnswerScore extends TextualAlignmentCa
 
     @Override
     protected List<String> getQuestionTerms(Question question) {
-        List<String> list = question.getTerms();
+        List<String> list = question.getWords();
         List<String> result = new ArrayList<>();
         for (String item : list) {
             if (item.length() > 1) {
