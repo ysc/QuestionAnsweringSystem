@@ -62,8 +62,14 @@ public class WordParser {
      * @param str 需要分词的文本
      * @return 分词结果
      */
-    public static List<Word> parse(String str) {
+    public static List<Word> parseWithoutStopWords(String str) {
         List<Word> words = WordSegmenter.seg(str, SegmentationAlgorithm.FullSegmentation);
+        //词性标注
+        PartOfSpeechTagging.process(words);
+        return words;
+    }
+    public static List<Word> parse(String str) {
+        List<Word> words = WordSegmenter.segWithStopWords(str, SegmentationAlgorithm.FullSegmentation);
         //词性标注
         PartOfSpeechTagging.process(words);
         return words;
