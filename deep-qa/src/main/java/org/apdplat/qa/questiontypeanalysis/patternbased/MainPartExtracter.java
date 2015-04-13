@@ -26,12 +26,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.ansj.domain.Term;
 import org.apdplat.qa.parser.WordParser;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import edu.stanford.nlp.ling.Word;
 import edu.stanford.nlp.parser.lexparser.LexicalizedParser;
 import edu.stanford.nlp.trees.GrammaticalStructure;
 import edu.stanford.nlp.trees.GrammaticalStructureFactory;
@@ -39,6 +37,7 @@ import edu.stanford.nlp.trees.Tree;
 import edu.stanford.nlp.trees.TreebankLanguagePack;
 import edu.stanford.nlp.trees.TypedDependency;
 import edu.stanford.nlp.trees.international.pennchinese.ChineseTreebankLanguagePack;
+import org.apdplat.word.segmentation.Word;
 
 /**
  * 提取主谓宾
@@ -48,25 +47,25 @@ import edu.stanford.nlp.trees.international.pennchinese.ChineseTreebankLanguageP
 public class MainPartExtracter {
 
     private static final Logger LOG = LoggerFactory.getLogger(MainPartExtracter.class);
-    private static LexicalizedParser lp;
-    private static GrammaticalStructureFactory gsf;
+    private static final LexicalizedParser LP;
+    private static final GrammaticalStructureFactory GSF;
 
     static {
         //模型
         String models = "models/chineseFactored.ser.gz";
         LOG.info("模型：" + models);
-        lp = LexicalizedParser.loadModel(models);
+        LP = LexicalizedParser.loadModel(models);
         //汉语
         TreebankLanguagePack tlp = new ChineseTreebankLanguagePack();
-        gsf = tlp.grammaticalStructureFactory();
+        GSF = tlp.grammaticalStructureFactory();
     }
 
     public String getQuestionMainPartNaturePattern(String question, String mainPart) {
         Map<String, String> map = new HashMap<>();
         //分词
-        List<Term> terms = WordParser.parse(question);
-        for (Term term : terms) {
-            map.put(term.getName(), term.getNatrue().natureStr);
+        List<Word> words = WordParser.parse(question);
+        for (Word word : words) {
+            map.put(word.getText(), word.getPartOfSpeech().getPos());
         }
         StringBuilder patterns = new StringBuilder();
         String[] items = mainPart.split(" ");
@@ -83,9 +82,9 @@ public class MainPartExtracter {
     public String getQuestionMainPartPattern(String question, String mainPart) {
         Map<String, String> map = new HashMap<>();
         //分词
-        List<Term> terms = WordParser.parse(question);
-        for (Term term : terms) {
-            map.put(term.getName(), term.getNatrue().natureStr);
+        List<Word> words = WordParser.parse(question);
+        for (Word word : words) {
+            map.put(word.getText(), word.getPartOfSpeech().getPos());
         }
         StringBuilder patterns = new StringBuilder();
         String[] items = mainPart.split(" ");
@@ -115,16 +114,14 @@ public class MainPartExtracter {
      * @return 问题结构
      */
     public QuestionStructure getMainPart(String question, String questionWords) {
-        List<Word> words = new ArrayList<>();
+        List<edu.stanford.nlp.ling.Word> words = new ArrayList<>();
         String[] qw = questionWords.split("\\s+");
         for (String item : qw) {
             item = item.trim();
             if ("".equals(item)) {
                 continue;
             }
-            Word word = new Word();
-            word.setWord(item.trim());
-            words.add(word);
+            words.add(new edu.stanford.nlp.ling.Word(item));
         }
         return getMainPart(question, words);
     }
@@ -133,19 +130,19 @@ public class MainPartExtracter {
      * 获取句子的主谓宾
      *
      * @param question 问题
-     * @param words HashWord列表
+     * @param words HasWord列表
      * @return 问题结构
      */
-    public QuestionStructure getMainPart(String question, List<Word> words) {
+    public QuestionStructure getMainPart(String question, List<edu.stanford.nlp.ling.Word> words) {
         QuestionStructure questionStructure = new QuestionStructure();
         questionStructure.setQuestion(question);
 
-        Tree tree = lp.apply(words);
+        Tree tree = LP.apply(words);
         LOG.info("句法树: ");
         tree.pennPrint();
         questionStructure.setTree(tree);
 
-        GrammaticalStructure gs = gsf.newGrammaticalStructure(tree);
+        GrammaticalStructure gs = GSF.newGrammaticalStructure(tree);
         if(gs == null){
             return null;
         }
@@ -216,7 +213,7 @@ public class MainPartExtracter {
         //临时谓语
         String second = v.split("-")[0];
         int secondIndex = Integer.parseInt(v.split("-")[1]);
-        String third = null;
+        String third = "";
 
         String value = map.get(v);
         if(value == null){
@@ -300,17 +297,18 @@ public class MainPartExtracter {
     private String questionParse(String question) {
         //分词
         LOG.info("对问题进行分词：" + question);
-        List<Term> terms = WordParser.parse(question);
-        StringBuilder termStr = new StringBuilder();
-        for (Term term : terms) {
-            termStr.append(term.getName()).append(" ");
+        List<Word> words = WordParser.parse(question);
+        StringBuilder wordStr = new StringBuilder();
+        for (Word word : words) {
+            wordStr.append(word.getText()).append(" ");
         }
-        LOG.info("分词结果为：" + termStr.toString().trim());
-        return termStr.toString().trim();
+        LOG.info("分词结果为：" + wordStr.toString().trim());
+        return wordStr.toString().trim();
     }
 
     /**
      * @param args
+     * @throws java.lang.Exception
      */
     public static void main(String[] args) throws Exception {
         MainPartExtracter mainPartExtracter = new MainPartExtracter();
