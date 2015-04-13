@@ -50,12 +50,17 @@ public class CommonCandidateAnswerSelect implements CandidateAnswerSelect {
 
         List<Word> words = WordParser.parse(evidence.getTitle() + evidence.getSnippet());
         for (Word word : words) {
+            //候选答案的长度要大于1
             if (word.getText().length() > 1 &&
+                    //未知词性也加入候选答案
                     (word.getPartOfSpeech()==PartOfSpeech.I 
                     || word.getPartOfSpeech().getPos().startsWith(question.getQuestionType().getPos()))) {
                 CandidateAnswer answer = new CandidateAnswer();
                 answer.setAnswer(word.getText());
                 candidateAnswerCollection.addAnswer(answer);
+                LOG.debug("成为候选答案："+word);
+            }else{
+                LOG.debug("未成为候选答案："+word);
             }
         }
         evidence.setCandidateAnswerCollection(candidateAnswerCollection);
