@@ -109,7 +109,7 @@
         <%
             }
         %>  	
-        <h2><a href="view.jsp">详细信息</a></h2>
+        <h2><a href="view.jsp">查看证据及答案</a></h2>
         <br/>
         <h2><a href="history_questions.jsp">其他用户曾经问过的问题</a></h2>
     </body>
