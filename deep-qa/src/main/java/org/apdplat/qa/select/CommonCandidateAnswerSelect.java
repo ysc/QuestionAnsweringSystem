@@ -30,6 +30,7 @@ import org.apdplat.qa.model.CandidateAnswerCollection;
 import org.apdplat.qa.model.Evidence;
 import org.apdplat.qa.model.Question;
 import org.apdplat.qa.parser.WordParser;
+import org.apdplat.word.recognition.PersonName;
 import org.apdplat.word.segmentation.PartOfSpeech;
 import org.apdplat.word.segmentation.Word;
 import org.slf4j.Logger;
@@ -50,17 +51,30 @@ public class CommonCandidateAnswerSelect implements CandidateAnswerSelect {
 
         List<Word> words = WordParser.parse(evidence.getTitle() + evidence.getSnippet());
         for (Word word : words) {
-            //候选答案的长度要大于1
-            if (word.getText().length() > 1 &&
-                    //未知词性也加入候选答案
-                    (word.getPartOfSpeech()==PartOfSpeech.I 
-                    || word.getPartOfSpeech().getPos().startsWith(question.getQuestionType().getPos()))) {
+            if (word.getText().length() < 2){
+                LOG.debug("忽略长度小于2的候选答案："+word);
+                continue;
+            }
+            if(word.getPartOfSpeech().getPos().startsWith(question.getQuestionType().getPos())){
                 CandidateAnswer answer = new CandidateAnswer();
                 answer.setAnswer(word.getText());
                 candidateAnswerCollection.addAnswer(answer);
                 LOG.debug("成为候选答案："+word);
-            }else{
-                LOG.debug("未成为候选答案："+word);
+                continue;
+            }
+            //处理人名
+            if(question.getQuestionType().getPos().equals("nr")){
+                if(PersonName.is(word.getText())){
+                    CandidateAnswer answer = new CandidateAnswer();
+                    answer.setAnswer(word.getText());
+                    candidateAnswerCollection.addAnswer(answer);
+                    LOG.debug("成为候选答案："+word);
+                }
+            }else if(word.getPartOfSpeech()==PartOfSpeech.I) {
+                CandidateAnswer answer = new CandidateAnswer();
+                answer.setAnswer(word.getText());
+                candidateAnswerCollection.addAnswer(answer);
+                LOG.debug("成为候选答案："+word);
             }
         }
         evidence.setCandidateAnswerCollection(candidateAnswerCollection);
