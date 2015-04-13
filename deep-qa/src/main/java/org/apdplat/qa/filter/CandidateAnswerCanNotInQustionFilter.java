@@ -40,18 +40,18 @@ public class CandidateAnswerCanNotInQustionFilter implements CandidateAnswerFilt
     @Override
     public void filter(Question question, List<CandidateAnswer> candidateAnswers) {
         //对问题分词
-        List<String> questionTerms = question.getTerms();
+        List<String> questionWords = question.getWords();
         StringBuilder str = new StringBuilder();
         str.append("对问题分词: ");
-        for (String questionTerm : questionTerms) {
-            str.append(questionTerm).append(" ");
+        for (String questionWord : questionWords) {
+            str.append(questionWord).append(" ");
         }
         LOG.debug(str.toString());
         //答案不能在问题中，去掉
         Iterator<CandidateAnswer> iterator = candidateAnswers.iterator();
         while (iterator.hasNext()) {
             CandidateAnswer candidateAnswer = iterator.next();
-            if (questionTerms.contains(candidateAnswer.getAnswer())) {
+            if (questionWords.contains(candidateAnswer.getAnswer())) {
                 iterator.remove();
                 LOG.debug("去掉问题中的词：" + candidateAnswer.getAnswer());
             }
