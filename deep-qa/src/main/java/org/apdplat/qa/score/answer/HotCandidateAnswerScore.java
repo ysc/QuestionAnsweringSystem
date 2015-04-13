@@ -24,13 +24,13 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-import org.ansj.domain.Term;
 import org.apdplat.qa.model.CandidateAnswer;
 import org.apdplat.qa.model.CandidateAnswerCollection;
 import org.apdplat.qa.model.Evidence;
 import org.apdplat.qa.model.Question;
 import org.apdplat.qa.system.ScoreWeight;
 import org.apdplat.qa.util.Tools;
+import org.apdplat.word.segmentation.Word;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -59,7 +59,7 @@ public class HotCandidateAnswerScore implements CandidateAnswerScore {
         CandidateAnswer bestCandidateAnswer = null;
         int miniDistance = Integer.MAX_VALUE;
         //1、对证据进行分词
-        List<Term> terms = Tools.getTerms(evidence.getTitle() + "," + evidence.getSnippet());
+        List<Word> evidenceWords = Tools.getWords(evidence.getTitle() + "," + evidence.getSnippet());
         //2、找出热词
         Map.Entry<String, Integer> hot = question.getHot();
         if (hot == null) {
@@ -69,17 +69,19 @@ public class HotCandidateAnswerScore implements CandidateAnswerScore {
         LOG.debug("热词：" + hot.getKey() + " " + hot.getValue());
         //3、找出热词的位置数组
         List<Integer> hotTermOffes = new ArrayList<>();
-        for (Term term : terms) {
-            if (term.getName().equals(hot.getKey())) {
-                hotTermOffes.add(term.getOffe());
+        for (int i=0; i<evidenceWords.size(); i++) {
+            Word evidenceWord = evidenceWords.get(i);
+            if (evidenceWord.getText().equals(hot.getKey())) {
+                hotTermOffes.add(i);
             }
         }
         for (CandidateAnswer candidateAnswer : candidateAnswerCollection.getAllCandidateAnswer()) {
             //4、找出候选答案的位置数组
             List<Integer> candidateAnswerOffes = new ArrayList<>();
-            for (Term term : terms) {
-                if (term.getName().equals(candidateAnswer.getAnswer())) {
-                    candidateAnswerOffes.add(term.getOffe());
+            for (int i=0; i<evidenceWords.size(); i++) {
+                Word evidenceWord = evidenceWords.get(i);
+                if (evidenceWord.getText().equals(candidateAnswer.getAnswer())) {
+                    candidateAnswerOffes.add(i);
                 }
             }
             //5、计算热词和候选答案的最近距离
