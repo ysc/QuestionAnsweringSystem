@@ -2268,7 +2268,6 @@ CEO:nr:50
 哪颗:RW.RWLocationSingle:270
 穿什么:RW.RWClothing:300
 何省:RW.RWLocationSingle:270
-是哪:RW.RWLocationSingle:270
 到哪:RW.RWLocationSingle:270
 哪儿:RW.RWLocationSingle:270
 何处:RW.RWLocationSingle:270
