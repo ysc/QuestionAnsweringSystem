@@ -67,6 +67,7 @@
                 if (question != null) {
             %>
         <font color="red">Question : <%=question.getQuestion()%> 问题类型：<%=question.getQuestionType().getDes()%>/<%=question.getQuestionType().getPos()%></font><br/><br/>
+        <font color="red">Question Words : </font> <%=WordParser.parse(question.getQuestion().replace("?", "").replace("？", ""))%><br/><br/>
             <%
                 int j = 1;
                 for (Evidence evidence : question.getEvidences()) {
