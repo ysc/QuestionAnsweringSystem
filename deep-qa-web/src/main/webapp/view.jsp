@@ -107,19 +107,19 @@
         %>
         <p>
             <b>可以像如下提问：</b><br/>
-            1、<a href="view.jsp?q=APDPlat的作者是谁？">APDPlat的作者是谁？</a><br/>
-            2、<a href="view.jsp?q=APDPlat的发起人是谁？">APDPlat的发起人是谁？</a><br/>
+            1、<a href="view.jsp?q=开源项目APDPlat应用级产品开发平台的作者是谁？">开源项目APDPlat应用级产品开发平台的作者是谁？</a><br/>
+            2、<a href="view.jsp?q=APDPlat开源项目的发起人是谁？">APDPlat开源项目的发起人是谁？</a><br/>
             3、<a href="view.jsp?q=谁死后布了七十二疑冢？">谁死后布了七十二疑冢？</a><br/>
             4、<a href="view.jsp?q=谁是资深Nutch搜索引擎专家？">谁是资深Nutch搜索引擎专家？</a><br/>
             5、<a href="view.jsp?q=BMW是哪个汽车公司制造的？">BMW是哪个汽车公司制造的？</a><br/>
             6、<a href="view.jsp?q=长城信用卡是哪家银行发行的？">长城信用卡是哪家银行发行的？</a><br/>
-            7、<a href="view.jsp?q=美国历史上第一所高等学府是哪个学校？">美国历史上第一所高等学府是哪个学校？</a><br/>
-            8、<a href="view.jsp?q=前身是红色中华通讯社的是什么？">前身是红色中华通讯社的是什么？</a><br/>
+            7、<a href="view.jsp?q=美国历史上第一所学校是哪一所？">美国历史上第一所学校是哪一所？</a><br/>
+            8、<a href="view.jsp?q=前身是红色中华通讯社的机构是哪个？">前身是红色中华通讯社的机构是哪个？</a><br/>
             9、<a href="view.jsp?q=“海的女儿”是哪个城市的城徽？">“海的女儿”是哪个城市的城徽？</a><br/>
             10、<a href="view.jsp?q=世界上流经国家最多的河流是哪一条？">世界上流经国家最多的河流是哪一条？</a><br/>
-            11、<a href="view.jsp?q=世界上最长的河流是什么？">世界上最长的河流是什么？</a><br/>
+            11、<a href="view.jsp?q=世界上最长的河流是什么？">世界上最长的河流是哪条？</a><br/>
             12、<a href="view.jsp?q=汉城是哪个国家的首都？">汉城是哪个国家的首都？</a><br/>
-            13、<a href="view.jsp?q=全球表面积有多少平方公里？">全球表面积有多少平方公里？</a>
+            13、<a href="view.jsp?q=世界上最小的海有多少万平方公里？">世界上最小的海有多少万平方公里？</a>
         </p>
         <font color="red">输入问题：</font><input id="q" name="q" size="50" maxlength="50">
         <p></p>
