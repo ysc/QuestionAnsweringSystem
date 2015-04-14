@@ -304,7 +304,7 @@ public class MySQLUtils {
         try {
             con = DriverManager.getConnection(URL, USER, PASSWORD);
         } catch (SQLException e) {
-            LOG.error("MySQL获取数据库连接失败：", e);
+            LOG.debug("MySQL获取数据库连接失败：", e);
         }
         return con;
     }
