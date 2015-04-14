@@ -55,26 +55,20 @@ public class CommonCandidateAnswerSelect implements CandidateAnswerSelect {
                 LOG.debug("忽略长度小于2的候选答案："+word);
                 continue;
             }
-            if(word.getPartOfSpeech().getPos().startsWith(question.getQuestionType().getPos())){
+            if(word.getPartOfSpeech().getPos().toLowerCase().startsWith(question.getQuestionType().getPos().toLowerCase())){
                 CandidateAnswer answer = new CandidateAnswer();
                 answer.setAnswer(word.getText());
                 candidateAnswerCollection.addAnswer(answer);
                 LOG.debug("成为候选答案："+word);
-                continue;
             }
             //处理人名
-            if(question.getQuestionType().getPos().equals("nr")){
+            else if(question.getQuestionType().getPos().equals("nr") && word.getPartOfSpeech()==PartOfSpeech.I){
                 if(PersonName.is(word.getText())){
                     CandidateAnswer answer = new CandidateAnswer();
                     answer.setAnswer(word.getText());
                     candidateAnswerCollection.addAnswer(answer);
                     LOG.debug("成为候选答案："+word);
                 }
-            }else if(word.getPartOfSpeech()==PartOfSpeech.I) {
-                CandidateAnswer answer = new CandidateAnswer();
-                answer.setAnswer(word.getText());
-                candidateAnswerCollection.addAnswer(answer);
-                LOG.debug("成为候选答案："+word);
             }
         }
         evidence.setCandidateAnswerCollection(candidateAnswerCollection);
