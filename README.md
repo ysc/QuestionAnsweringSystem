@@ -167,6 +167,7 @@
 
     其他人机问答系统介绍：
     1、OpenEphyra
-        OpenEphyra is the first open framework for question answering (QA). 
-        It retrieves accurate answers to natural language questions from the Web and other sources.
-    [OpenEphyra主页](http://www.ephyra.info/)
+        Ephyra is a modular and extensible framework for open domain question answering (QA). 
+        The system retrieves accurate answers to natural language questions from the Web and other sources. 
+        
+[OpenEphyra主页](http://www.ephyra.info/)
