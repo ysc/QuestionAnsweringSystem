@@ -164,3 +164,9 @@
     dic是中文分词组件依赖的词库，questionTypePatterns是问题类别分析依赖的模式定义，可根据自己的需要修改。
 
 [测试人机问答系统智能性的3760个问题](http://my.oschina.net/apdplat/blog/401622)
+
+    其他人机问答系统介绍：
+    1、OpenEphyra
+        OpenEphyra is the first open framework for question answering (QA). 
+        It retrieves accurate answers to natural language questions from the Web and other sources.
+    [OpenEphyra主页](http://www.ephyra.info/)
