@@ -170,21 +170,26 @@
 1、IBM Watson（商业）
 
     Watson is built to mirror the same learning process that we have.
-    Watson has been learning the language of professions and is trained by experts to work across many different industries. 
+    Watson has been learning the language of professions and is trained 
+    by experts to work across many different industries. 
         
 [IBM Watson主页](http://www.ibm.com/smarterplanet/us/en/ibmwatson/what-is-watson.html)
     
 2、Siri（商业）
 
-    Siri /ˈsɪri/ is a part of Apple Inc.'s iOS which works as an intelligent personal assistant and knowledge navigator. 
-    The feature uses a natural language user interface to answer questions, make recommendations, and perform actions by delegating requests to a set of Web services. 
+    Siri /ˈsɪri/ is a part of Apple Inc.'s iOS which works as 
+    an intelligent personal assistant and knowledge navigator. 
+    The feature uses a natural language user interface to 
+    answer questions, make recommendations, and perform actions 
+    by delegating requests to a set of Web services. 
 
 [Siri主页](http://www.apple.com/ios/siri/)
 
 3、OpenEphyra（开源）
 
     Ephyra is a modular and extensible framework for open domain question answering (QA). 
-    The system retrieves accurate answers to natural language questions from the Web and other sources. 
+    The system retrieves accurate answers to natural language questions from the Web and 
+    other sources. 
     
 [OpenEphyra主页](http://www.ephyra.info/)
     
