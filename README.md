@@ -179,6 +179,11 @@
         The feature uses a natural language user interface to answer questions, make recommendations, and perform actions 
         by delegating requests to a set of Web services. 
         
+    4、IBM Watson（商业）
+        Watson is built to mirror the same learning process that we have.
+        Watson has been learning the language of professions and is trained by experts 
+        to work across many different industries. 
+        
         
 [OpenEphyra主页](http://www.ephyra.info/)
 
@@ -187,3 +192,5 @@
 [Magi Semantic Search主页](http://www.peak-labs.com/)
 
 [Siri主页](http://www.apple.com/ios/siri/)
+
+[IBM Watson主页](http://www.ibm.com/smarterplanet/us/en/ibmwatson/what-is-watson.html)
