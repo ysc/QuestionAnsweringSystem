@@ -174,8 +174,16 @@
         Magi is a search engine that gives you answers instead of references. 
         It's designed to be General, Feasible and Useful. 
         
+    3、Siri（商业）
+        Siri /ˈsɪri/ is a part of Apple Inc.'s iOS which works as an intelligent personal assistant and knowledge navigator. 
+        The feature uses a natural language user interface to answer questions, make recommendations, and perform actions 
+        by delegating requests to a set of Web services. 
+        
+        
 [OpenEphyra主页](http://www.ephyra.info/)
 
 [Magi Semantic Search视频](http://v.youku.com/v_show/id_XODIwMzU1NDY4.html)
 
 [Magi Semantic Search主页](http://www.peak-labs.com/)
+
+[Siri主页](http://www.apple.com/ios/siri/)
