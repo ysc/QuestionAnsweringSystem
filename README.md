@@ -175,5 +175,7 @@
         It's designed to be General, Feasible and Useful. 
         
 [OpenEphyra主页](http://www.ephyra.info/)
+
 [Magi Semantic Search视频](http://v.youku.com/v_show/id_XODIwMzU1NDY4.html)
+
 [Magi Semantic Search主页](http://www.peak-labs.com/)
