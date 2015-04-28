@@ -166,8 +166,14 @@
 [测试人机问答系统智能性的3760个问题](http://my.oschina.net/apdplat/blog/401622)
 
     其他人机问答系统介绍：
-    1、OpenEphyra
+    1、OpenEphyra（开源）
         Ephyra is a modular and extensible framework for open domain question answering (QA). 
         The system retrieves accurate answers to natural language questions from the Web and other sources. 
         
+    2、Magi Semantic Search（商业）
+        Magi is a search engine that gives you answers instead of references. 
+        It's designed to be General, Feasible and Useful. 
+        
 [OpenEphyra主页](http://www.ephyra.info/)
+[Magi Semantic Search视频](http://v.youku.com/v_show/id_XODIwMzU1NDY4.html)
+[Magi Semantic Search主页](http://www.peak-labs.com/)
