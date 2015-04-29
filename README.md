@@ -199,4 +199,10 @@
     It's designed to be General, Feasible and Useful. 
 
 [Magi Semantic Search主页](http://www.peak-labs.com/)
+
+5、微软小冰（商业）
+
+    微软小冰是智能聊天机器人，基于微软搜索引擎和大数据积累，所有数据全部来自于公开的互联网网页信息。
+    
+[微软小冰主页](http://www.msxiaoice.com/)
     
