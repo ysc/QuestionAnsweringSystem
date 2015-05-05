@@ -195,7 +195,16 @@
     
 [YodaQA主页](https://github.com/brmson/yodaqa/)
 
-4、IBM Watson（商业）
+4、OpenQA（Java开源）
+
+    OpenQA is an open source question answering framework that unifies approaches from 
+    several domain experts. 
+    The aim of OpenQA is to provide a common platform that can be used to promote advances 
+    by easy integration and measurement of different approaches.
+    
+[OpenQA主页](http://openqa.aksw.org/)
+
+5、IBM Watson（商业）
 
     Watson is built to mirror the same learning process that we have.
     Watson has been learning the language of professions and is trained 
@@ -203,7 +212,7 @@
         
 [IBM Watson主页](http://www.ibm.com/smarterplanet/us/en/ibmwatson/what-is-watson.html)
     
-5、Siri（商业）
+6、Siri（商业）
 
     Siri /ˈsɪri/ is a part of Apple Inc.'s iOS which works as 
     an intelligent personal assistant and knowledge navigator. 
@@ -213,14 +222,14 @@
 
 [Siri主页](http://www.apple.com/ios/siri/)
     
-6、Magi Semantic Search（商业）
+7、Magi Semantic Search（商业）
 
     Magi is a search engine that gives you answers instead of references. 
     It's designed to be General, Feasible and Useful. 
 
 [Magi Semantic Search主页](http://www.peak-labs.com/)
 
-7、微软小冰（商业）
+8、微软小冰（商业）
 
     微软小冰是智能聊天机器人，基于微软搜索引擎和大数据积累，所有数据全部来自于公开的互联网网页信息。
     
