@@ -167,7 +167,25 @@
 
 其他人机问答系统介绍：
 
-1、IBM Watson（商业）
+1、OpenEphyra（Java开源）
+
+    Ephyra is a modular and extensible framework for open domain question answering (QA). 
+    The system retrieves accurate answers to natural language questions from the Web and 
+    other sources. 
+    
+[OpenEphyra主页](http://www.ephyra.info/)
+
+2、Watsonsim（Java开源）
+    
+    Open-domain question answering system from UNCC.
+    Watsonsim works using a pipeline of operations on questions, candidate answers, and 
+    their supporting passages. 
+    In many ways it is similar to IBM's Watson, and Petr's YodaQA. 
+    It's not all that similar to more logic based systems like OpenCog or Wolfram Alpha.
+    
+[Watsonsim主页](https://github.com/SeanTater/uncc2014watsonsim/)
+
+3、IBM Watson（商业）
 
     Watson is built to mirror the same learning process that we have.
     Watson has been learning the language of professions and is trained 
@@ -175,7 +193,7 @@
         
 [IBM Watson主页](http://www.ibm.com/smarterplanet/us/en/ibmwatson/what-is-watson.html)
     
-2、Siri（商业）
+4、Siri（商业）
 
     Siri /ˈsɪri/ is a part of Apple Inc.'s iOS which works as 
     an intelligent personal assistant and knowledge navigator. 
@@ -184,23 +202,15 @@
     by delegating requests to a set of Web services. 
 
 [Siri主页](http://www.apple.com/ios/siri/)
-
-3、OpenEphyra（开源）
-
-    Ephyra is a modular and extensible framework for open domain question answering (QA). 
-    The system retrieves accurate answers to natural language questions from the Web and 
-    other sources. 
     
-[OpenEphyra主页](http://www.ephyra.info/)
-    
-4、Magi Semantic Search（商业）
+5、Magi Semantic Search（商业）
 
     Magi is a search engine that gives you answers instead of references. 
     It's designed to be General, Feasible and Useful. 
 
 [Magi Semantic Search主页](http://www.peak-labs.com/)
 
-5、微软小冰（商业）
+6、微软小冰（商业）
 
     微软小冰是智能聊天机器人，基于微软搜索引擎和大数据积累，所有数据全部来自于公开的互联网网页信息。
     
