@@ -25,9 +25,9 @@ import java.util.List;
 
 import org.apdplat.qa.util.Tools;
 import org.apdplat.word.WordSegmenter;
-import org.apdplat.word.segmentation.PartOfSpeechTagging;
 import org.apdplat.word.segmentation.SegmentationAlgorithm;
 import org.apdplat.word.segmentation.Word;
+import org.apdplat.word.tagging.PartOfSpeechTagging;
 import org.apdplat.word.util.WordConfTools;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
