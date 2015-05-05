@@ -192,6 +192,8 @@
     YodaQA stands for "Yet anOther Deep Answering pipeline" and 
     the system is inspired by the DeepQA (IBM Watson) papers. 
     It is built on top of the Apache UIMA.
+    
+[YodaQA主页](https://github.com/brmson/yodaqa/)
 
 4、IBM Watson（商业）
 
