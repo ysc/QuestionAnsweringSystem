@@ -1,5 +1,24 @@
 ##QuestionAnsweringSystem是一个Java实现的人机问答系统，能够自动分析问题并给出候选答案。IBM人工智能计算机系统"沃森"（Watson）在2011年2月美国热门的电视智力问答节目"危险边缘"（Jeopardy！）中战胜了两位人类冠军选手，QuestionAnsweringSystem就是IBM Watson的Java开源实现。
 
+##使用方法：
+
+    1、安装JDK8和Maven2.2.1
+        将JDK的bin目录和Maven的bin目录加入PATH环境变量，确保在命令行能调用java和mvn命令：
+        java -version
+            java version "1.8.0_45"
+        mvn -v
+            Apache Maven 2.2.1
+            
+    2、获取源码
+        git clone https://github.com/ysc/QuestionAnsweringSystem.git
+        建议自己注册一个GitHub账号，将项目Fork到自己的账号下，然后再从自己的账号下签出项目源码，这样便于使用GitHub的Pull requests功能进行协作开发。
+    
+    3、运行项目
+        unix类操作系统执行：
+            chmod +x startup.sh & ./startup.sh
+        windows类操作系统执行：
+            startup.bat
+
 ##工作原理：
 
     1、判断问题类型（答案类型），当前使用模式匹配的方法，将来支持更多的方法，如朴素贝叶斯分类器。
