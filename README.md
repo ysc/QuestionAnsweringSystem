@@ -11,13 +11,17 @@
             
     2、获取源码
         git clone https://github.com/ysc/QuestionAnsweringSystem.git
-        建议自己注册一个GitHub账号，将项目Fork到自己的账号下，然后再从自己的账号下签出项目源码，这样便于使用GitHub的Pull requests功能进行协作开发。
+        建议自己注册一个GitHub账号，将项目Fork到自己的账号下，然后再从自己的账号下签出项目源码，
+        这样便于使用GitHub的Pull requests功能进行协作开发。
     
     3、运行项目
         unix类操作系统执行：
             chmod +x startup.sh & ./startup.sh
         windows类操作系统执行：
-            startup.bat
+            ./startup.bat
+
+    4、使用系统
+        打开浏览器访问：http://localhost:8080/deep-qa-web/index.jsp
 
 ##工作原理：
 
