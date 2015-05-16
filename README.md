@@ -244,7 +244,7 @@
     at the MIT Computer Science and Artificial Intelligence Laboratory. 
     
     Unlike information retrieval systems (e.g., search engines), 
-    START aims to supply users with "just the right information," 
+    START aims to supply users with "just the right information" 
     instead of merely providing a list of hits. 
     
     Currently, the system can answer millions of English questions about 
