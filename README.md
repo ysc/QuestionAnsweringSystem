@@ -196,7 +196,7 @@
 
 [测试人机问答系统智能性的3760个问题](http://my.oschina.net/apdplat/blog/401622)
 
-[问答系统的前世今生](http://my.oschina.net/apdplat/blog/420370)
+[人机问答系统的前世今生](http://my.oschina.net/apdplat/blog/420370)
 
 [人机问答系统的类别](http://my.oschina.net/apdplat/blog/420720)
 
