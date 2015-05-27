@@ -196,6 +196,8 @@
 
 [测试人机问答系统智能性的3760个问题](http://my.oschina.net/apdplat/blog/401622)
 
+[问答系统的前世今生](http://my.oschina.net/apdplat/blog/420370)
+
 其他人机问答系统介绍：
 
 1、OpenEphyra（Java开源）
