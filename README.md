@@ -198,6 +198,8 @@
 
 [问答系统的前世今生](http://my.oschina.net/apdplat/blog/420370)
 
+[人机问答系统的类别](http://my.oschina.net/apdplat/blog/420720)
+
 其他人机问答系统介绍：
 
 1、OpenEphyra（Java开源）
