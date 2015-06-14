@@ -200,6 +200,8 @@
 
 [人机问答系统的类别](http://my.oschina.net/apdplat/blog/420720)
 
+[What is Question Answering?](https://class.coursera.org/nlp/lecture/155)
+
 其他人机问答系统介绍：
 
 1、OpenEphyra（Java开源）
