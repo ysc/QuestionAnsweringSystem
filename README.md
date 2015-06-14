@@ -284,16 +284,24 @@
     
 [Wolfram|Alpha主页](http://www.wolframalpha.com/)
     
-9、Magi Semantic Search（商业）
-
-    Magi is a search engine that gives you answers instead of references. 
-    It's designed to be General, Feasible and Useful. 
-
-[Magi Semantic Search主页](http://www.peak-labs.com/)
+9、Evi（商业）
+    
+    Evi was founded in August 2005, originally under the name of True Knowledge, with the mission 
+    of powering a new kind of search experience where users can access the world's knowledge simply 
+    by asking for the information they need in a way that is completely natural.
+    
+[Evi主页](https://www.evi.com/)
 
 10、微软小冰（商业）
 
     微软小冰是智能聊天机器人，基于微软搜索引擎和大数据积累，所有数据全部来自于公开的互联网网页信息。
     
 [微软小冰主页](http://www.msxiaoice.com/)
+    
+11、Magi Semantic Search（商业）
+
+    Magi is a search engine that gives you answers instead of references. 
+    It's designed to be General, Feasible and Useful. 
+
+[Magi Semantic Search主页](http://www.peak-labs.com/)
     
