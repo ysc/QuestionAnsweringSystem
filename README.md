@@ -275,15 +275,23 @@
     by delegating requests to a set of Web services. 
 
 [Siri主页](http://www.apple.com/ios/siri/)
+
+8、Wolfram|Alpha（商业）
+
+    Wolfram|Alpha introduces a fundamentally new way to get knowledge and answers 
+    not by searching the web, but by doing dynamic computations based on a vast collection 
+    of built-in data, algorithms, and methods.
     
-8、Magi Semantic Search（商业）
+[Wolfram|Alpha主页](http://www.wolframalpha.com/)
+    
+9、Magi Semantic Search（商业）
 
     Magi is a search engine that gives you answers instead of references. 
     It's designed to be General, Feasible and Useful. 
 
 [Magi Semantic Search主页](http://www.peak-labs.com/)
 
-9、微软小冰（商业）
+10、微软小冰（商业）
 
     微软小冰是智能聊天机器人，基于微软搜索引擎和大数据积累，所有数据全部来自于公开的互联网网页信息。
     
