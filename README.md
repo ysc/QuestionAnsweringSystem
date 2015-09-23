@@ -2,33 +2,26 @@
 
 ##使用方法：
 
-    1、安装JDK8和Maven2.2.1
+    1、安装JDK8和Maven3.3.3
         将JDK的bin目录和Maven的bin目录加入PATH环境变量，确保在命令行能调用java和mvn命令：
         java -version
-            java version "1.8.0_45"
+            java version "1.8.0_60"
         mvn -v
-            Apache Maven 2.2.1
-
-    2、准备word分词器
-        word分词器1.3还未release，先自己编译最新的源码
-        git clone https://github.com/ysc/word.git
-        cd word
-        mvn clean install
-        cd ..
+            Apache Maven 3.3.3
             
-    3、获取问答系统源码
+    2、获取人机问答系统源码
         git clone https://github.com/ysc/QuestionAnsweringSystem.git
         cd QuestionAnsweringSystem
         建议自己注册一个GitHub账号，将项目Fork到自己的账号下，然后再从自己的账号下签出项目源码，
         这样便于使用GitHub的Pull requests功能进行协作开发。
     
-    4、运行项目
+    3、运行项目
         unix类操作系统执行：
             chmod +x startup.sh & ./startup.sh
         windows类操作系统执行：
             ./startup.bat
 
-    5、使用系统
+    4、使用系统
         打开浏览器访问：http://localhost:8080/deep-qa-web/index.jsp
 
 ##工作原理：
