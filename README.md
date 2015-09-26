@@ -123,7 +123,7 @@
     <dependency>
         <groupId>org.apdplat</groupId>
         <artifactId>deep-qa</artifactId>
-        <version>1.1</version>
+        <version>1.2</version>
     </dependency>
 
     在应用如何使用呢？示例代码如下：
