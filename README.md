@@ -69,7 +69,7 @@
 ##API接口：
 
 	调用地址：
-		http://127.0.0.1/api/ask?n=1&q=APDPlat的作者是谁？
+		http://127.0.0.1/deep-qa-web/api/ask?n=1&q=APDPlat的作者是谁？
 	参数：
 		n表示需要返回的答案的个数
 		q表示问题
@@ -88,7 +88,7 @@
 
 1、初始化MySQL数据库(MySQL作为数据缓存区使用，此步骤可选)：   
 
-    在MySQL命令行中执行QuestionAnsweringSystem\deep-qa\src\main\resources\mysql\questionanswer.sql文件中的脚本   
+    在MySQL命令行中执行QuestionAnsweringSystem/deep-qa/src/main/resources/mysql/questionanswer.sql文件中的脚本   
     MySQL编码：UTF-8，
     主机：127.0.0.1
     端口：3306
@@ -99,14 +99,13 @@
 2、构建war文件并部署到tomcat：
 
     cd QuestionAnsweringSystem   
-    mvn install   
-    cd deep-qa-web\target
-    cp deep-qa-web-1.1.war apache-tomcat-7.0.37/webapps/QuestionAnsweringSystem.war   
+    mvn install
+    cp deep-qa-web/target/deep-qa-web-1.2.war apache-tomcat-7.0.37/webapps/   
     启动tomcat
 	
 3、打开浏览器访问：
 
-    http://localhost:8080/QuestionAnsweringSystem/
+    http://localhost:8080/deep-qa-web-1.2/index.jsp
 	
 [可部署war包下载](http://pan.baidu.com/s/1hq9pekc)
 
@@ -146,7 +145,7 @@
     首先在自己的服务器上如192.168.0.1部署好了，然后就可以通过Json Over HTTP的方式提供服务，使用方法如下所示：
 
     调用地址：
-    http://192.168.0.1/api/ask?n=1&q=APDPlat的作者是谁？
+    http://192.168.0.1/deep-qa-web/api/ask?n=1&q=APDPlat的作者是谁？
     参数：
     n表示需要返回的答案的个数
     q表示问题
@@ -169,7 +168,7 @@
     <dependency>
         <groupId>org.apdplat</groupId>
         <artifactId>deep-qa</artifactId>
-        <version>1.1</version>
+        <version>1.2</version>
     </dependency>
 
     示例代码如下：
