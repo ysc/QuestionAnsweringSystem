@@ -194,6 +194,8 @@
 
 [What is Question Answering?](https://class.coursera.org/nlp/lecture/155)
 
+本项目在由100offer举办的「寻找实干和坚持的技术力量」Side Project赞助活动中被评选为[「最具人气奖」](http://i.100offer.com/projects/result)
+
 其他人机问答系统介绍：
 
 1、OpenEphyra（Java开源）
