@@ -100,7 +100,7 @@
 
     cd QuestionAnsweringSystem   
     mvn install
-    cp deep-qa-web/target/deep-qa-web-1.2.war apache-tomcat-7.0.37/webapps/   
+    cp deep-qa-web/target/deep-qa-web-1.2.war apache-tomcat-8.0.27/webapps/   
     启动tomcat
 	
 3、打开浏览器访问：
