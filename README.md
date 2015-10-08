@@ -2,9 +2,9 @@
 
 对本项目进行捐赠的个人和公司表示感谢：
 
-1、[100offer](http://100offer.com/)，在100offer举办的[「寻找实干和坚持的技术力量」](http://i.100offer.com/projects/result)中，本项目获得「最具人气奖」，100offer给本项目捐赠5000（税后4200）。
+1、[100offer](http://100offer.com/)：在100offer举办的[「寻找实干和坚持的技术力量」](http://i.100offer.com/projects/result)中，本项目获得「最具人气奖」，100offer给本项目捐赠5000（税后4200）。
 
-2、[兰科集团](http://www.all58.com/)，兰科集团创始人蓝方力给本项目捐赠微信红包200。
+2、[兰科集团](http://www.all58.com/)：兰科集团创始人蓝方力给本项目捐赠微信红包200。
 
 ##使用方法：
 
