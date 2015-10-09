@@ -16,6 +16,10 @@
 
 6、[17RUNNER](http://www.17runner.com/)：17RUNNER站长江中炼给本项目捐赠微信红包100。
 
+7、[辽宁中科信](http://www.lnzkx.com/)：辽宁中科信CTO王新贺给本项目捐赠微信红包20。
+
+8、[去哪儿网](http://www.qunar.com/)：去哪儿网高级工程师李荣强给本项目支付宝捐赠100。
+
 ##使用方法：
 
     1、安装JDK8和Maven3.3.3
