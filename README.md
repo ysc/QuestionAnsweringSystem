@@ -1,5 +1,7 @@
 ##QuestionAnsweringSystem是一个Java实现的人机问答系统，能够自动分析问题并给出候选答案。IBM人工智能计算机系统"沃森"（Watson）在2011年2月美国热门的电视智力问答节目"危险边缘"（Jeopardy！）中战胜了两位人类冠军选手，QuestionAnsweringSystem就是IBM Watson的Java开源实现。
 
+[QuestionAnsweringSystem技术实现简要分析](http://blog.sina.com.cn/s/blog_9be6dec10102vq55.html)
+
 ##对本项目进行捐赠的个人和公司表示感谢：
 
 1、[100offer](http://100offer.com/)：在100offer举办的[「寻找实干和坚持的技术力量」](http://i.100offer.com/projects/result)中，本项目获得「最具人气奖」，100offer给本项目捐赠5000（税后4200）。
