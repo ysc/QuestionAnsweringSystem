@@ -2,11 +2,19 @@
 
 [QuestionAnsweringSystem技术实现简要分析](http://blog.sina.com.cn/s/blog_9be6dec10102vq55.html)
 
-##对本项目进行捐赠的个人和公司表示感谢：
+##对本项目进行捐赠的个人和公司表示感谢（按捐赠时间降序排列）：
 
 1、[100offer](http://100offer.com/)：在100offer举办的[「寻找实干和坚持的技术力量」](http://i.100offer.com/projects/result)中，本项目获得「最具人气奖」，100offer给本项目捐赠5000（税后4200）。
 
 2、[兰科集团](http://www.all58.com/)：兰科集团创始人蓝方力给本项目捐赠微信红包200。
+
+3、[酷云互动](http://www.kuyun.com/)：酷云互动首席科学家陆承恩给本项目支付宝捐赠200。
+
+4、兰州腾迪网络科技有限公司：腾迪网络创始人唐峰给本项目支付宝捐赠200。
+
+5、[微瑞思创](http://weiresearch.com)：微瑞思创CTO夏振宇给本项目支付宝捐赠200。
+
+6、[17RUNNER](http://www.17runner.com/)：17RUNNER站长江中炼给本项目捐赠微信红包100。
 
 ##使用方法：
 
