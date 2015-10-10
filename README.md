@@ -208,6 +208,17 @@
     运行程序后会在当前目录下生成目录deep-qa，目录里面又有两个目录dic和questionTypePatterns。
     dic是中文分词组件依赖的词库，questionTypePatterns是问题类别分析依赖的模式定义，可根据自己的需要修改。
 
+##Watson介绍：
+
+    Watson is a computer system like no other ever built. 
+    It analyzes natural language questions and content well enough and fast enough 
+    to compete and win against champion players at Jeopardy!
+    
+[This is Watson：A detailed explanation of how Watson works](http://ieeexplore.ieee.org/xpl/tocresult.jsp?isnumber=6177717)
+[The DeepQA Research Team](http://researcher.watson.ibm.com/researcher/view_group.php?id=2099)
+
+##相关文章：
+
 [测试人机问答系统智能性的3760个问题](http://my.oschina.net/apdplat/blog/401622)
 
 [人机问答系统的前世今生](http://my.oschina.net/apdplat/blog/420370)
@@ -216,9 +227,7 @@
 
 [What is Question Answering?](https://class.coursera.org/nlp/lecture/155)
 
-本项目在由100offer举办的「寻找实干和坚持的技术力量」Side Project赞助活动中被评选为[「最具人气奖」](http://i.100offer.com/projects/result)
-
-其他人机问答系统介绍：
+##其他人机问答系统介绍：
 
 1、OpenEphyra（Java开源）
 
