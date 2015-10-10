@@ -218,6 +218,8 @@
 
 [The DeepQA Research Team](http://researcher.watson.ibm.com/researcher/view_group.php?id=2099)
 
+[Building Watson - A Brief Overview of the DeepQA Project](https://www.youtube.com/watch?v=3G2H3DZ8rNc)
+
 ##相关文章：
 
 [测试人机问答系统智能性的3760个问题](http://my.oschina.net/apdplat/blog/401622)
