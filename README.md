@@ -215,6 +215,7 @@
     to compete and win against champion players at Jeopardy!
     
 [This is Watson：A detailed explanation of how Watson works](http://ieeexplore.ieee.org/xpl/tocresult.jsp?isnumber=6177717)
+
 [The DeepQA Research Team](http://researcher.watson.ibm.com/researcher/view_group.php?id=2099)
 
 ##相关文章：
