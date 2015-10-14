@@ -2,7 +2,7 @@
 
 [QuestionAnsweringSystem技术实现简要分析](http://blog.sina.com.cn/s/blog_9be6dec10102vq55.html)
 
-[捐赠致谢](https://github.com/ysc/QuestionAnsweringSystem/wiki/donate)
+[捐赠致谢](https://github.com/ysc/QuestionAnsweringSystem/wiki/donation)
 
 ##使用方法：
 
