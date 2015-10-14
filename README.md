@@ -2,33 +2,7 @@
 
 [QuestionAnsweringSystem技术实现简要分析](http://blog.sina.com.cn/s/blog_9be6dec10102vq55.html)
 
-##对本项目进行捐赠的个人和公司表示感谢（按捐赠时间降序排列）：
-
-如有对本项目进行捐赠意向的朋友，请捐赠到支付宝账号：yang-shangchuan@qq.com 或 招商银行卡号：6225 8893 1767 4283，账户名：杨尚川，可通过手机号跟我联系：17767131919 
-
-1、[100offer](http://100offer.com/)：在100offer举办的[「寻找实干和坚持的技术力量」](http://i.100offer.com/projects/result)中，本项目获得「最具人气奖」，100offer给本项目捐赠5000（税后4200）。
-
-2、[兰科集团](http://www.all58.com/)：兰科集团创始人「蓝方力」给本项目捐赠微信红包200。
-
-3、[酷云互动](http://www.kuyun.com/)：酷云互动首席科学家「陆承恩」给本项目支付宝捐赠200。
-
-4、兰州腾迪网络科技有限公司：腾迪网络创始人「唐峰」给本项目支付宝捐赠200。
-
-5、[微瑞思创](http://weiresearch.com)：微瑞思创CTO「夏振宇」给本项目支付宝捐赠200。
-
-6、[17RUNNER](http://www.17runner.com/)：17RUNNER站长「江中炼」给本项目捐赠微信红包100。
-
-7、[辽宁中科信](http://www.lnzkx.com/)：辽宁中科信CTO「王新贺」给本项目捐赠微信红包20。
-
-8、[去哪儿网](http://www.qunar.com/)：去哪儿网高级工程师「李荣强」给本项目支付宝捐赠100。
-
-9、[火石](http://www.firestone-link.com/)：火石创始人「杨红飞」给本项目捐赠微信红包600。
-
-10、上海宝贤信息技术有限公司：宝贤信息创始人「张克明」给本项目支付宝捐赠2015。
-
-11、[聚财猫](https://www.jucaicat.com/)：聚财猫高级工程师「方帮民」给本项目支付宝捐赠80。
-
-12、[微鲸科技](http://www.whaley.cn/)：微鲸科技算法工程师「刘强」给本项目捐赠微信红包20。
+[捐赠致谢](https://github.com/ysc/QuestionAnsweringSystem/wiki/donate)
 
 ##使用方法：
 
