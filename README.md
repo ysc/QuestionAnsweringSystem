@@ -195,12 +195,14 @@
     Watson is a computer system like no other ever built. 
     It analyzes natural language questions and content well enough and fast enough 
     to compete and win against champion players at Jeopardy!
+
+[IBM Watson: How it Works](https://www.youtube.com/watch?v=_Xcmh1LQB9I)
+
+[Building Watson - A Brief Overview of the DeepQA Project](https://www.youtube.com/watch?v=3G2H3DZ8rNc)
     
 [This is Watson：A detailed explanation of how Watson works](http://ieeexplore.ieee.org/xpl/tocresult.jsp?isnumber=6177717)
 
 [The DeepQA Research Team](http://researcher.watson.ibm.com/researcher/view_group.php?id=2099)
-
-[Building Watson - A Brief Overview of the DeepQA Project](https://www.youtube.com/watch?v=3G2H3DZ8rNc)
 
 ##相关文章：
 
