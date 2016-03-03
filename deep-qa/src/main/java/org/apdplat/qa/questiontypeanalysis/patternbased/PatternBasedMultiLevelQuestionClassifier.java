@@ -48,11 +48,12 @@ import org.slf4j.LoggerFactory;
 /**
  * 使用【模式匹配】的方法判断问题类型
  *
- * 模式匹配的5种方式： 1、直接和【问题】匹配，如：APDPlat的发起人是谁？
- * 2、和问题分词及词性标注之后的【词和词性序列】进行匹配，如：apdplat/en 的/uj 发起人/n 是/v 谁/RW.RWPersonSingle
- * ？/w 3、和问题分词及词性标注之后的【词性序列】进行匹配，如：en/uj/n/v/RW.RWPersonSingle/w 4、利用问题的【主谓宾 词 和
- * 词性】进行匹配，如：发起人/n 是/v 谁/RW.RWPersonSingles 5、利用问题的【主谓宾
- * 词性】进行匹配，如：n/v/RW.RWPersonSingle * @author 杨尚川
+ * 模式匹配的5种方式：
+ * 1、直接和【问题】匹配，如：APDPlat的发起人是谁？
+ * 2、和问题分词及词性标注之后的【词和词性序列】进行匹配，如：apdplat/en 的/uj 发起人/n 是/v 谁/RW.RWPersonSingle ？/w
+ * 3、和问题分词及词性标注之后的【词性序列】进行匹配，如：en/uj/n/v/RW.RWPersonSingle/w
+ * 4、利用问题的【主谓宾 词 和 词性】进行匹配，如：发起人/n 是/v 谁/RW.RWPersonSingles
+ * 5、利用问题的【主谓宾词性】进行匹配，如：n/v/RW.RWPersonSingle * @author 杨尚川
  * 
  * @author 杨尚川
  */
