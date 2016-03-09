@@ -4,7 +4,7 @@
 
 [捐赠致谢](https://github.com/ysc/QuestionAnsweringSystem/wiki/donation)
 
-##使用方法：
+## 使用方法
 
     1、安装JDK8和Maven3.3.3
         将JDK的bin目录和Maven的bin目录加入PATH环境变量，确保在命令行能调用java和mvn命令：
@@ -28,7 +28,7 @@
     4、使用系统
         打开浏览器访问：http://localhost:8080/deep-qa-web/index.jsp
 
-##工作原理：
+## 工作原理
 
     1、判断问题类型（答案类型），当前使用模式匹配的方法，将来支持更多的方法，如朴素贝叶斯分类器。
     2、提取问题关键词。
@@ -37,7 +37,7 @@
     5、结合问题以及搜索结果对候选答案进行打分。
     6、返回得分最高的TopN项候选答案。
 	
-##目前支持5种问题类型（答案类型）：
+## 目前支持5种问题类型（答案类型）
 
     1、人名 
 		如：
@@ -70,7 +70,7 @@
 		澳门是在哪一年回归祖国怀抱的？
 		邓小平在什么时候进行南巡讲话？
 
-## 增加新的问题类型（答案类型）：
+## 增加新的问题类型（答案类型）
 
     1、在枚举类 org.apdplat.qa.model.QuestionType 中
        增加新的问题类型，并在词性和问题类型之间做映射。
@@ -79,9 +79,9 @@
        目录中的 3 个文件代表不同抽象层级的模式，只需要在其中一个文件中增加新的模式即可。
        
     3、在类 org.apdplat.qa.questiontypeanalysis.QuestionTypeTransformer 中
-       将模式匹配规则映射为枚举类org.apdplat.qa.model.QuestionType的实例。
+       将模式匹配规则映射为枚举类 org.apdplat.qa.model.QuestionType 的实例。
 		
-##API接口：
+## API接口
 
 	调用地址：
 		http://127.0.0.1/deep-qa-web/api/ask?n=1&q=APDPlat的作者是谁？
@@ -99,7 +99,7 @@
 			}
 		]
 			
-##使用说明：
+## 使用说明
 
 1、初始化MySQL数据库(MySQL作为数据缓存区使用，此步骤可选)：   
 
@@ -124,7 +124,7 @@
 	
 [可部署war包下载](http://pan.baidu.com/s/1hq9pekc)
 
-##如何在你的应用中集成人机问答系统QuestionAnsweringSystem? 
+## 在你的应用中集成人机问答系统QuestionAnsweringSystem
 
     QuestionAnsweringSystem提供了两种集成方式，以库的方式嵌入到应用中，以平台的方式独立部署。
 
@@ -174,7 +174,7 @@
         }
     ]
 
-##深入了解：
+## 深入了解
 
     QuestionAnsweringSystem由2个子项目构成，deep-qa和deep-qa-web。
     deep-qa是核心部分，deep-qa-web提供web界面来和用户交互，同时也提供了Json Over HTTP的访问接口，便于异构系统的集成。
@@ -201,7 +201,7 @@
     运行程序后会在当前目录下生成目录deep-qa，目录里面又有两个目录dic和questionTypePatterns。
     dic是中文分词组件依赖的词库，questionTypePatterns是问题类别分析依赖的模式定义，可根据自己的需要修改。
 
-##Watson介绍：
+## Watson介绍
 
     Watson is a computer system like no other ever built. 
     It analyzes natural language questions and content well enough and fast enough 
@@ -215,7 +215,7 @@
 
 [The DeepQA Research Team](http://researcher.watson.ibm.com/researcher/view_group.php?id=2099)
 
-##相关文章：
+## 相关文章
 
 [测试人机问答系统智能性的3760个问题](http://my.oschina.net/apdplat/blog/401622)
 
@@ -225,7 +225,7 @@
 
 [What is Question Answering?](https://class.coursera.org/nlp/lecture/155)
 
-##其他人机问答系统介绍：
+## 其他人机问答系统介绍
 
 1、OpenEphyra（Java开源）
 
