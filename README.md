@@ -69,6 +69,17 @@
 		大庆油田是哪一年发现的？
 		澳门是在哪一年回归祖国怀抱的？
 		邓小平在什么时候进行南巡讲话？
+
+## 增加新的问题类型（答案类型）：
+
+    1、在枚举类 org.apdplat.qa.model.QuestionType 中
+       增加新的问题类型，并在词性和问题类型之间做映射。
+       
+    2、在资源目录 src/main/resources/questionTypePatterns 中增加新的模式匹配规则来支持新的问题类型的判定
+       目录中的 3 个文件代表不同抽象层级的模式，只需要在其中一个文件中增加新的模式即可。
+       
+    3、在类 org.apdplat.qa.questiontypeanalysis.QuestionTypeTransformer 中
+       将模式匹配规则映射为枚举类org.apdplat.qa.model.QuestionType的实例。
 		
 ##API接口：
 
