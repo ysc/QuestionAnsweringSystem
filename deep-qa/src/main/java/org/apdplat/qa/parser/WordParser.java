@@ -62,13 +62,13 @@ public class WordParser {
      * @return 分词结果
      */
     public static List<Word> parseWithoutStopWords(String str) {
-        List<Word> words = WordSegmenter.seg(str, SegmentationAlgorithm.FullSegmentation);
+        List<Word> words = WordSegmenter.seg(str, SegmentationAlgorithm.MaxNgramScore);
         //词性标注
         PartOfSpeechTagging.process(words);
         return words;
     }
     public static List<Word> parse(String str) {
-        List<Word> words = WordSegmenter.segWithStopWords(str, SegmentationAlgorithm.FullSegmentation);
+        List<Word> words = WordSegmenter.segWithStopWords(str, SegmentationAlgorithm.MaxNgramScore);
         //词性标注
         PartOfSpeechTagging.process(words);
         return words;
