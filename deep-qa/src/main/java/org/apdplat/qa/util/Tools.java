@@ -238,7 +238,7 @@ public class Tools {
         int index = -1;
         while (true) {
             index = text.indexOf(pattern, index + 1);
-            if (index > 0) {
+            if (index > -1) {
                 LOG.debug("模式: " + pattern + " 出现在文本中的位置：" + index);
                 count++;
             } else {
