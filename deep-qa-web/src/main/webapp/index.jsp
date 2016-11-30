@@ -52,7 +52,7 @@
     </head>
     <body>
         <h1><font color="blue">人机问答系统演示 <a href="https://github.com/ysc/QuestionAnsweringSystem" target="_blank">项目主页</a></font></h1>
-        <h2><a href="view.jsp">更多细节</a></h2>
+        <h2><a href="view.jsp?q=<%=questionStr%>">更多细节</a></h2>
                 <%
                     if (questionStr == null || questionStr.trim().length() <= 3) {
                 %>      
