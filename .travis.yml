@@ -3,7 +3,5 @@ language: java
 jdk:
   - oraclejdk8
 
-before_script:
-  - export MAVEN_OPTS="-Xmx5g -Xms1g $MAVEN_OPTS"
-  - echo $JAVA_OPTS
-  - echo $MAVEN_OPTS
+install:
+  - mvn -N io.takari:maven:wrapper
