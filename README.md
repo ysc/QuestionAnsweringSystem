@@ -2,6 +2,10 @@
 
 [QuestionAnsweringSystem技术实现简要分析](http://blog.sina.com.cn/s/blog_9be6dec10102vq55.html)
 
+[QuestionAnsweringSystem在100offer举办的「寻找实干和坚持的技术力量」Side Project赞助活动中荣获最具人气奖](http://i.100offer.com/projects/result)
+
+![100offer最具人气奖.png](100offer最具人气奖.png)
+
 [捐赠致谢](https://github.com/ysc/QuestionAnsweringSystem/wiki/donation)
 
 ## 使用方法
